@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Media Players</title>
+  <meta name="description" content="Accessibility testing">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<!--  <link rel="stylesheet" href="style.css">-->
+  <link rel="icon" type="image/png" sizes="96x96" href="../assets/favicon.png">
+  <link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+<body class="full">
+  <header class="header">
+    <ul class="nav-list">
+      <li><a href="../home.html">Home</a></li>
+      <li><a href="../resources.html">Resources</a></li>
+      <li><a href="../media.html">Media</a></li>
+      <li><a href="../documents.html">Documents</a></li>
+      <li><a href="../structure.html">Structure</a></li>
+      <li><a href="../components.html">UI Components</a></li>
+      <li><a href="../text.html">Text</a></li>
+    </ul>
+  </header>
+  <nav aria-label="Secondary" class="secondary">
+    <ul>
+      <li><a href="images.html">Images</a></li>
+      <li><a href="audio.html">Audio</a></li>
+      <li><a href="video.html">Video</a></li>
+      <li><a href="media-players.html">Media Players</a></li>
+    </ul>
+  </nav>
+  <main class="main">
+    <h1>Media Players</h1>
+    <p>Media players must have accessible interfaces and follow WCAG. Players also need to support the range of formats of text alternatives we use for time-based media. These formats include captions, transcripts, text video description, and audio description.</p>
+    <p>AblePlayer  also support rendering video description as text that will be read aloud by a screenreader.</p>
+    <p>You can configure how captions appear; changing things like position on screen, color, and background color. It's great if a player supports interface controls for a user to customize settings to their own preference.</p>
+    <p>If a player doesn't support toggling on and off audio descriptions, upload both as seperate videos and make sure they are shared on the same page or they link to each other. This is also a good approach when your video has extended audio description where the described video is longer than the undescribed.</p>
+    <h2>Players</h2>
+    <h3>AblePlayer</h3>
+    <a href="https://ableplayer.github.io/ableplayer/">AblePlayer Website</a>
+    <p>AblePlayer is free and open-source. It is highly customizable and supports audio description, captioning, interactive transcripts. It's also got a feature where you can feed it video description as time-stamped WebVTT tracks that will appear in aria-live regions; meaning the text will be spoken by a screen-reader. Note: this approach requires Javascript. This would be an alternative to creating a narration track.</p>
+    <h3>OzPlayer</h3>
+    <p>OzPlayer bills iteself as the world's first completely accessible video player. It's free for non-profits with a budget under a million. It doesn't currently have an audio counterpart.</p>
+    <a href="https://www.accessibilityoz.com/ozplayer/">OzPlayer Website</a>
+    <!-- <h3>JWPlayer</h3> -->
+    <h3>YouTube</h3>
+    <p>It's not perfect, but YouTube has some okay accessibility.</p>
+    <!-- <p>Some notes, when you are embedding a video from YouTube, the iFrame does not have have a title associated with it.</p> -->
+    <p>Note: If you're embedding content from Youtube, make sure that your embedded vido are pulling in the captioning of the original track. It takes an extra flag in the embed code. (If you don't take this step the embedded video will be missing the captions, yikes!)</p>
+  </main>
+</body>

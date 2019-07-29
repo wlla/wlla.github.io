@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Navigation</title>
+  <meta name="description" content="Accessibility testing">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<!--  <link rel="stylesheet" href="style.css">-->
+  <link rel="icon" type="image/png" sizes="96x96" href="assets/favicon.png">
+  <link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+<body class="full">
+  <header class="header">
+    <ul class="nav-list">
+      <li><a href="../home.html">Home</a></li>
+      <li><a href="../resources.html">Resources</a></li>
+      <li><a href="../media.html">Media</a></li>
+      <li><a href="../documents.html">Documents</a></li>
+      <li><a href="../structure.html">Structure</a></li>
+      <li><a href="../components.html">UI Components</a></li>
+      <li><a href="../text.html">Text</a></li>
+    </ul>
+  </header>
+  <nav aria-label="Secondary" class="secondary">
+    <ul>
+      <li><a href="regions.html">Regions</a></li>
+      <li><a href="headings.html">Headings</a></li>
+      <li><a href="lists-tables.html">Lists & Tables</a></li>
+      <li><a href="navigation.html">Navigation</a></li>
+      <li><a href="focus.html">Focus</a></li>
+      <li><a href="reading-order.html">Reading Order</a></li>
+      <li><a href="titles-language.html">Titles & Language</a></li>
+    </ul>
+  </nav>
+  <main class="main">
+    <h1>Navigation</h1>
+    <h2>Elements and Regions</h2>
+    <p>On the web, the HTML element `nav` should be used for navigation. Using this element will create a navigation region. If you have multiple navigation regions on a page, give each one a unique name with the `aria-label` attribute. Remember that the type of region will be announced by the screenreader so there's no need to include the words "navigation" or "region" in the label. The <a href="region.html">Region page</a> has more details on all these points.</p>
+    <h2>Sitemap</h2>
+    <p>People should be able to orient themselves to your materials. On the web, it's good to provide an overall map of your site. A sitemap supports success criteria 2.4.5 Multiple Ways and 2.4.8 Location, both part of the <a href="https://www.w3.org/WAI/WCAG21/quickref/#navigable">2.4 Guideline: Navigable</a>.</p>
+    <h2>Breadcrumbs</h2>
+    <p>Breadcrumbs are a list of links, usually towards the beginning of a page before the main content. The communicate where you are in the structure of the site.</p>
+    <p>Let's break this down. A decent pattern for breacrumbs would be:</p>
+    <ul>
+      <li>Breadcrumbs are in a `nav` element.</li>
+      <li>The nav element has a unique name `aria-label="Breadcrumbs"`. When a screenreader hits this section of the page, it will announce something like "Breadcrumbs navigation region".</li>
+      <li>Links are organized in a list.</li>
+      <li>There should be some visual formatting between links to help reinforce the hierarchy. Often this will be a forward slash or >. This information is communicated in list form: each link is its own list item and the organization of the list from first to last communicate the hierarchy.</li>
+    </ul>
+    <h2>Pagination</h2>
+    <p>With pagination, you want to communicate the range, give people agency to skip to any pages, and communicate to everyone which page is selected.</p>
+    <p>Pagination should be in a <code>nav</code> element with a unique and descriptive name like <code>aria-label=pagination</code>.</p>
+    <p>If you're dealing with a set of page numbers, organize them in a list. Indicate which page is selected in a programmatic way, like with visibly hidden text or ARIA attributes. Let people jump to desired pages. Depending on how many pages you're dealing with, include a dropdown or input to let people skip.</p>
+    <p>If your new page content is created with JS, as with a single page application, build it so everyone is notified when the new content loads; make that information available to screenreaders.</p>
+    <p>My personal preference is also to always have your URL constructed in a way so that people can update the URL to navigate to a desired page.</p>
+    <p>Getting rid of pagination is a bad idea. This happens with the infinite scroll pattern or adding a "see more" button to dynamically load in more content. Using these patterns can cause navigation issues.</p>
+  </main>
+</body>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Documents</title>
+  <meta name="description" content="Accessibility testing">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<!--  <link rel="stylesheet" href="style.css">-->
+  <link rel="icon" type="image/png" sizes="96x96" href="assets/favicon.png">
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body class="full">
+  <header class="header">
+    <ul class="nav-list">
+      <li><a href="home.html">Home</a></li>
+      <li><a href="resources.html">Resources</a></li>
+      <li><a href="media.html">Media</a></li>
+      <li><a href="documents.html">Documents</a></li>
+      <li><a href="structure.html">Structure</a></li>
+      <li><a href="components.html">UI Components</a></li>
+      <li><a href="text.html">Text</a></li>
+    </ul>
+  </header>
+  <nav aria-label="Secondary" class="secondary">
+    <ul>
+      <li><a href="documents/word.html">Word Documents</a></li>
+      <li><a href="documents/pdf.html">PDFs</a></li>
+      <li><a href="documents/social-media.html">Social Media</a></li>
+      <li><a href="documents/presentations.html">Presentations</a> </li>
+    </ul>
+  </nav>
+  <main class="main">
+    <h1>Documents</h1>
+    <p>In this context, documents refer to formats like PDF, Microsoft Word, Google Slides, and EPUBs.</p>
+    <p>Accessibility in a range of formats like Word docs, PDF, and Slideshows have the same principles as web pages. How we get there changes by product. On this page, I've noted some of the critical concepts for digital documents. Techniques for applying are in respective format pages.</p>
+    <h2>General Guidelines</h2>
+    <h3>Semantics & Structure</h3>
+    <p>Semantic structures of a page including headings, lists, and tables need to be created semantically so that information is programmatically available.<p>
+    </p>For most authoring software, that means using formatting tools rather than visually styling each of these elements by hand. An example of using a formatting tool would be to create a heading using the *****edit ribbon of MS Word******; this will make a semantic heading that has visual styling like color, weight, and font size. The visual styles of these are customizable so you can set up your own stylings.</p>
+    <p>The bonus to using formatting tools and built in styles is that it is faster and more uniform; plus, if you want to update your visual design, you can just update the saved styles and all the headings in your document will be updated.</p>
+    <h3>Reading Order</h3>
+      <p>Reading order is the order of things on a page. Note: in digital technologies, this can be different from the order things are visually presented on a page. This is because styling can be applied to manipulate visual placement. (Often this styling is applied with CSS and Javascript.)</p>
+      <p>We need to make sure that the visual and programmatic styling are logical and mostly synchronized. For instance, if I published an English language newsletter that has two columns, I want a screenreader to know it should read the heading first, then the left hand column, then the right hand column.</p>
+      <p>In something like Word, this is usually taken care of for you. In something like PowerPoint, you might need to set the reading order by organizing a list of the grouped items on the page.</p>
+    <h3>Machine Readable Text</h3>
+      <p>Text needs to be machine readable, meaning a computer needs to be able to recognize text as text and be able to interpret the individual characters. If text is machine readable, you can copy and paste it.</p>
+      <p>The alternative is to present text in an image format, some users won't be able to read it. This is because screenreaders can't read images, images don't magnify well, and users can't change the color contrast or font size as easily. (Or change to a different font.)</p>
+    <h3>Headings</h3>
+      <p>Documents should have appropriate heading structure. (And from the guideline on semantics, we know headings need to be semantic.)</p>
+    <h3>Tables of Contents</h3>
+      <p>With longer documents, it's good to provide a table of contents. It'll help orient users to your material, let them know what to expect, and make it easy to navigate to different sections.</p>
+      <p>Since you'll have a good, strong heading structure; the Table of Contents will just be and index of your headings. You may want to limit it to just certain higher level headings rather than the full structure. Just work with what makes sense and is useful.</p>
+    <h3>Plain Language & Reading Level</h3>
+      <p>Plain language and reading level comes down to the way you write your content. Some authoring software have built in checkers that can tell you your reading level score. Visit the <a href="text.html">Text section</a> for tools and guidance.</p>
+    <h3>Typography</h3>
+    <p>Use a San serif font; especially for longer sections of text. San serif fonts are generally considered more legible and readable.</p>
+    <h3>Color Contrast</h3>
+    <p>Text and background need to have a color contrast ratio of 4.5:1.</p>
+    <h3>Use of Color</h3>
+    <p>Don't rely only on color to communicate. For example, if you only use color to indicate a link in text, a user who can't percieve the color difference won't know that the link is different from static text.</p>
+    <h3>Large Print</h3>
+    <p>For something to be large print, it should have a minimum of 18 point font and be written in a san-serif font.</p>
+    <h3>Tables</h3>
+    <p>Tables should only be used for presenting tabular data, they should not be used for page layout. As best you can within the document format, follow the best practices for tables.</p>
+    <h3>Accessible Images</h3>
+      <p>Images should all have alt text.<p>
+      <p>Complex images, graphs, and charts should have alt text and a long description.</p>
+    <h3>Document metadata</h3>
+      <p>Title and document language are two important metadata fields for assistive technology. Including a Title will ensure that a document is meaningful and descriptive. Including the documents language makes sure that screenreaders use the correct voice package, ie Spanish gets read out in Spanish and not English.</p>
+    <h2>Screenreaders & Documents</h2>
+    <p>If you are reading an editable document with a screenreader, you can move between modes for reading and for editing. Similar to how you work with a form. This is to take care of the fact that when your reading, you want your "h" key to take you to the next heading; when you are writing, you want the "h" key to type the letter "h" in the document.</p>
+    <h2>Publishing & Sharing Documents</h2>
+    <p>While not strictly related to accessibility, it's always a good idea to check the metadata of a document for personal information before sharing. Many softwares will attach your name and other info to a document which you may or may not want.</p>
+  </main>
+</body>

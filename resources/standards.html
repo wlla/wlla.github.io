@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Standards</title>
+  <meta name="description" content="Accessibility testing">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<!--  <link rel="stylesheet" href="style.css">-->
+  <link rel="icon" type="image/png" sizes="96x96" href="../assets/favicon.png">
+  <link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+<body class="full">
+  <header class="header">
+    <ul class="nav-list">
+      <li><a href="../home.html">Home</a></li>
+      <li><a href="../resources.html">Resources</a></li>
+      <li><a href="../media.html">Media</a></li>
+      <li><a href="../documents.html">Documents</a></li>
+      <li><a href="../structure.html">Structure</a></li>
+      <li><a href="../components.html">UI Components</a></li>
+      <li><a href="../text.html">Text</a></li>
+    </ul>
+  </header>
+  <nav aria-label="Secondary" class="secondary">
+    <ul>
+      <li><a href="assistive-technology.html">Assistive Technology</a></li>
+      <li><a href="tools.html">Tools</a></li>
+      <li><a href="words-phrases.html">Words and Phrases</a></li>
+      <li><a href="standards.html">Standards</a></li>
+    </ul>
+  </nav>
+  <main class="main">
+    <h1>DRAFT - Standards</h1>
+    <h2>Standard makers</h2>
+    <h3>World Wide Web Consortium</h3>
+    <p>The World Wide Web Consortium (W3C) has been creating and maintaining web standards since the web was born! It's an international body creating a number of standards relevant to accessibility including the main standards explicitly on accessibility. There are a number of working groups in the W3C creating and maintianing these standards. (And many ways to get involved.) The Web Accessibility Initiative works directly on accessibility guidelines.</p>
+    <h3>Daisy Consortium</h3>
+    <h3>ISO</h3>
+    <h2>Standards</h2>
+    <h3>Web Content Accessibility Guidelines (WCAG)</h3>
+    <dl class="">
+      <dt>Creator:</dt>
+      <dd>W3C</dd>
+      <dt>Standard:</dt>
+      <dd><a href="https://www.w3.org/TR/WCAG21/">Web Content Accessibility Guidelines (WCAG) 2.1</a></dd>
+    </dl>
+    <p>The Web Content Accessibility Guidelines are the international standard for digital accessibility. Don't let the "Web" in the title throw you. These standards are technology agnostic; meaning they definitely apply to web technologies, but the principles and success criteria can also be applied to the technology stacks of native mobile apps, virtual reality experiences, et al.</p>
+    <p>Officially adopted Summer 2018, WCAG 2.1 is the most up-to-date standard.</p>
+    <h3>Authoring Tool Accessibility Guidelines (ATAG)</h3>
+    <p>This standard helps us build authoring tools that are accessible (everyone can use the interface) and that help create accessible content. So, the standard has two parts. The first is that the interface follow WCAG. The second section are guidelines for how an authoring tool can make sure the resulting content is accessible.</p>
+    <p>Interfaces that should follow this guideline are those used to create digital material. Examples would be, the comment section of website, a Twitter client, a WYSIWYG (What You See Is What You Get) editor in a CMS (Content Management System.)</p>
+    <h3>HTML</h3>
+    <h3>Accessible Rich Internet Applications (ARIA)</h3>
+    <p>When people use technologies like JavaScript or write their own custom widgets, information on these changes and UI components aren't necessarily surfaced for assistive technology. The ARIA standard gives people a way to define these changes and components in a way expected by screenreaders. As much as possible, we should try to build things that already surface this information expected ways. This is why the best ARIA is no ARIA, meaning a product was built in a way that doesn't require the addition of ARIA or where ARIA is additive. Sometimes, updates in other standards will make ARIA defunct. For instance, HTML5 includes elements that take care of some of the work of the ARIA role attribute.</p>
+    <p>The ARIA properties are implemented as HTML attributes. The <a href="labels-instructions.html">Labels & Instructions</a> page covers examples of ARIA attributes being used to label UI elements.</p>
+    <dl class="">
+      <dt>Creator:</dt>
+      <dd>W3C</dd>
+      <dt>Standard:</dt>
+      <dd><a href="https://www.w3.org/TR/wai-aria">Accessible Rich Internet Applications (WAI-ARIA) 1.1</a></dd>
+    </dl>
+  </main>
+  <footer class="footer">
+    <ul>
+      <li><a href="../footer/sitemap.html">Sitemap</a></li>
+      <li><a href="https://github.com/wlla">Github</a></li>
+      <!-- <li>Rights</li>
+      <li>Sweet badge</li> -->
+    </ul>
+  </footer>
+</body>

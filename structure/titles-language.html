@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Titles & Language</title>
+  <meta name="description" content="Accessibility testing">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<!--  <link rel="stylesheet" href="style.css">-->
+  <link rel="icon" type="image/png" sizes="96x96" href="assets/favicon.png">
+  <link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+<body class="full">
+  <header class="header">
+    <ul class="nav-list">
+      <li><a href="../home.html">Home</a></li>
+      <li><a href="../resources.html">Resources</a></li>
+      <li><a href="../media.html">Media</a></li>
+      <li><a href="../documents.html">Documents</a></li>
+      <li><a href="../structure.html">Structure</a></li>
+      <li><a href="../components.html">UI Components</a></li>
+      <li><a href="../text.html">Text</a></li>
+    </ul>
+  </header>
+  <nav aria-label="Secondary" class="secondary">
+    <ul>
+      <li><a href="regions.html">Regions</a></li>
+      <li><a href="headings.html">Headings</a></li>
+      <li><a href="lists-tables.html">Lists & Tables</a></li>
+      <li><a href="navigation.html">Navigation</a></li>
+      <li><a href="focus.html">Focus</a></li>
+      <li><a href="reading-order.html">Reading Order</a></li>
+      <li><a href="titles-language.html">Titles & Language</a></li>
+    </ul>
+  </nav>
+  <main class="main">
+    <h1>Titles & Language</h1>
+    <p>A title is a specific metadata field with an understandable title for the digital webpage, document, or material. The Language is a metadata field programmatically marking the language of the page or content. Both these fields are required. They are metadata of the material.</p>
+    <h2>Title</h2>
+    <p>In a webpage, the title is the text that appears in a browser tab. If they have a lot of tabs open, the title is what people skim to know which tab is which. The title of page is set by the HTML <code>title</code> element in the <code>head</code>.</p>
+    <p>Frequently, a tab will also include a "favicon". A "favicon" is a little icon, usually a logo, that people add to their sites. In Twitter, the Favicon is their blue bird logo, in the USA Govenment Jobs site, it is an icon of the USA Flag.</p>
+    <!-- <p>Screen readers don't read favicons.</p> -->
+    <p>Titles should be unique and descriptive. In a website, having all the pages titled the same way is not helpful.</p>
+    <p>In most cases, the title should be the same as the Heading One (h1) of the page. On the web, you may want to identify the site itself; this should follow the title for the main page. For example, on Wikipedia the titles follow the convention of "Name of article" + "- Wikipedia". While the h1 of the page is just the "Name of article". So the article on <a href="https://en.wikipedia.org/wiki/Universal_design">Universal Design</a> has the title "Universal Design - Wikipedia".</p>
+    <p>In a digital document, the title is the human readable title; it is what is announced when a screenreader opens a file. If a title is missing, the screenreader will simply announce the file name, which can be less than meaningful.</p>
+    <h3>WCAG Guidance on Titles</h3>
+    <ul>
+      <li><a href="https://www.w3.org/WAI/WCAG21/quickref/#page-titled">2.4.2 Page Titled, Level A</a></li>
+    </ul>
+    <h2>Language</h2>
+    <p>Language programmatically marks what language the material is written in. This needs to be explicitly set so screenreaders can know what language to read in. If it is missing, the screenreader will need to make a guess. If I'm using a screenreader where the default is English language and it tries to read Spanish language text, the pronunciation will be completely incorrect. If it tries to read text in a non-Roman alphabet, it won't announce anything.</p>
+    <p>On the web, you set the language with the HTML <code>lang</code> attribute. Make sure you use a valid language code. Language codes can be specific, for instance, there is a code for Castilian Spanish.</p>
+    <p>In XML, you set the language with the <code>xml:lang</code> attribute. In documents like Word and PDF, you can set the language in the documents metadata settings.</p>
+    <p>If you have a subsection of your material that is written in different language, you'll want to tag that section with the appropriate language. In HTML, you still use the <code>lang</code> attribute, you just add it to the element or wrap the text in a <code>span</code> and add it there. Note: you don't need to do this for words and phrases that are proper nouns, technical terms, or that have become part borrowed words in the main language of the material.</p>
+    <h3>WCAG Guidance on Language</h3>
+    <ul>
+      <li><a href="https://www.w3.org/WAI/WCAG21/quickref/#language-of-page">3.1.1 Language of Page, Level A</a></li>
+      <li><a href="https://www.w3.org/WAI/WCAG21/quickref/#language-of-parts">3.1.2 Language of Parts, Level AA</a></li>
+    </ul>
+    <h2>Checking for Titles and Language</h2>
+    <p>You can use automated tools to check for the prescene or absence of these tags, but you will always need to do a manual check to make sure the fields are meaningful and accurate.</p>
+    <p>On a webpage, you have a couple of options:</p>
+    <ul>
+      <li>The WAVE tool or the aXe tools</li>
+      <li>Skimming through the headings with a screenreader</li>
+      <li>Checking the code of your page and searching for the "title" and "lang".</li>
+    </ul>
+    <p>For different authoring software and documents like PDFs, EPUBs, and MS Word docs, you can check the documents metadata. There are also built in accessibility wizards and checkers that will alert you if a metadata field is missing.</p>
+  </main>
+</body>

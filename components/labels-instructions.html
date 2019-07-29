@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Labels & Instructions</title>
+  <meta name="description" content="Accessibility testing">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<!--  <link rel="stylesheet" href="style.css">-->
+  <link rel="icon" type="image/png" sizes="96x96" href="../assets/favicon.png">
+  <link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+<body class="full">
+  <header class="header">
+    <ul class="nav-list">
+      <li><a href="../home.html">Home</a></li>
+      <li><a href="../resources.html">Resources</a></li>
+      <li><a href="../media.html">Media</a></li>
+      <li><a href="../documents.html">Documents</a></li>
+      <li><a href="../structure.html">Structure</a></li>
+      <li><a href="../components.html">UI Components</a></li>
+      <li><a href="../text.html">Text</a></li>
+    </ul>
+  </header>
+  <nav aria-label="Secondary" class="secondary">
+    <ul>
+      <li><a href="labels-instructions.html">Labels & Instructions</a></li>
+      <li><a href="links-buttons.html">Links & Buttons</a></li>
+      <li><a href="forms.html">Forms</a></li>
+      <li><a href="search.html">Search</a></li>
+      <li><a href="modals.html">Modals</a></li>
+    </ul>
+  </nav>
+  <main class="main">
+    <h1>Labels & Instructions</h1>
+    <h2>Labels</h2>
+    <p>Everything a user can interact with needs a label. These labels need to be programmatic, meaning a computer program should be able to tell which labels are for which component.</p>
+    <p>Labels should be persistent and visible.</p>
+    <p>On the web, there are a couple different ways to attach a label programmatically. For instance, with an HTML <code>button</code>, the text within the <code>button</code> element is the label. For inputs, you'll usually use a <code>label</code> element. Feildsets also provide labels. You can also add or extend labels with the aria attributes.</p>
+    <p>The <code>aria-label</code> and <code>aria-labelledby</code> attributes are useful, for extending the uniqueness of the label. For any component you build start with the HTML recommendation for associating a label.</p>
+    <p>An <code>aria-labelledby</code> attribute points to one or more ids to create an accessible label. An <code>aria-label</code> is defined by a text like "button label."</p>
+    <!-- <p><a href="https://www.w3.org/TR/accname-1.1/">Accessible Name and Description Computation</a></p>
+    <p>Label hierarchy:</p>
+    <ol>
+      <li>aria-labelledby</li>
+      <li>aria-label</li>
+      <li>alt</li>
+      <li>title</li>
+    </ol> -->
+    <h3>Visible & Accessible Labels</h3>
+    <p>Visible labels are any visible text labelling a user interface components. Always present it as text rather than text in an image. The accessible label is the label that is programmatically available to other technologies, including assistive technology. Sometimes the visible and accessible label are the same. Sometimes the accessible label has additional text.</p>
+    <p>Labels should be visible in text. The one exception may be a search bar where the "Search" button is represented with the icon of a magnifying glass. Users are familiar with this convention. Remember, even if you use an icon visually, you have to include an accessible text label.</p>
+    <p>The visible label must match the accessible label. What does that mean? It means any visible text labelling an ui component needs to match or start the accessible label.</p>
+    <h3>Unique Labels</h3>
+    <p>Unique labels are important. We need to know what each UI component is and if there are multiples of the same type we need to know how they are different from one another.</p>
+    <p>Let's take as an example a library catalog search page with multiple books listed. The catalog entries are the title, some metadata, and then a button to reserve the book. Each button has label "Reserve" programmatically and visually. The reserve button is visually close to the title it reserves for context. However, when I'm skimming through these buttons with a screen reader, I just hear "Reserve...Reserve...Reserve." It would be more useful if the buttons included the title of the book.</p>
+    <p>The two things I want to name the button are already on the page, the label "Reserve" and the title of the book. So, I give each of those things a unique <code>id</code> and reference them with an <code>aria-labelledy</code>.</p>
+    <p>Now when I skim the buttons my screenreader will read "Reserve The Very Hungry Caterpillar". When looking at the page with a screen magnifier, the buttons may still be somewhat similar so make sure to use grouping and other visual cludes to connect the button and the title.</p>
+    <p id="caterpillar">The Very Hungry Caterpillar</p>
+    <p>By: Eric Carle</p>
+    <p>Published: 1969</p>
+    <button id="b1" aria-labelledby="b1 caterpillar" type="button" name="button">Reserve</button>
+    <p id="pancakes">Pancakes, Pancakes!</p>
+    <p>By: Eric Carle</p>
+    <p>Published: 1970</p>
+    <button id="b2" aria-labelledby="b2 pancakes" type="button" name="button">Reserve</button>
+    <p id="seed">The Tiny Seed</p>
+    <p>By: Eric Carle</p>
+    <p>Published: 1970</p>
+    <button id="b3" aria-labelledby="b3 seed" type="button" name="button">Reserve</button>
+    <!-- <p id="secret">The Secret Birthday Message</p>
+    <p>By: Eric Carle</p>
+    <p>Published: 1972</p>
+    <button id="b4" aria-labelledby="b4 secret" type="button" name="button">Reserve</button> -->
+    <p id="chameleon">The Mixed-Up Chameleon</p>
+    <p>By: Eric Carle</p>
+    <p>Published: 1975</p>
+    <button id="b5" aria-labelledby="b5 chameleon" type="button" name="button">Reserve</button>
+    <!-- <p id="crab">A House for Hermit Crab</p>
+    <p>By: Eric Carle</p>
+    <p>Published: 1987</p>
+    <button id="b6" aria-labelledby="b6 crab" type="button" name="button">Reserve</button> -->
+    <!-- <input type="text" id="example-search" name="example-search"><button>Search</button> -->
+    <h2>WCAG Guidance on Labels & Instructions</h2>
+    <p>There are a number of success criteria relating to labels and instructions.</p>
+    <p>Related WCAG Success Criteria:</p>
+    <ul>
+      <li><a href="https://www.w3.org/WAI/WCAG21/quickref/?showtechniques=131#info-and-relationships">1.3.1 Info and Relationships, Level A</a></li>
+      <li><a href="https://www.w3.org/WAI/WCAG21/quickref/?showtechniques=131#identify-input-purpose">1.3.5 Identify Input Purpose, Level AA (New to 2.1)</a></li>
+      <li><a href="https://www.w3.org/WAI/WCAG21/quickref/?showtechniques=131%2C136%2C246#headings-and-labels">2.4.6 Headings and Labels, Level AA</a></li>
+      <li><a href="https://www.w3.org/WAI/WCAG21/quickref/?showtechniques=131%2C136%2C246%2C253#label-in-name">2.5.3 Label in Name Level A (New to 2.1)</a></li>
+      <li><a href="https://www.w3.org/WAI/WCAG21/quickref/?showtechniques=131%2C136%2C246%2C253#name-role-value">4.1.2 Name, Role, Value, Level A</a></li>
+    </ul>
+  </main>
+  <footer class="footer">
+    <ul>
+      <li><a href="../footer/sitemap.html">Sitemap</a></li>
+      <li><a href="https://github.com/wlla">Github</a></li>
+      <!-- <li>Rights</li>
+      <li>Sweet badge</li> -->
+    </ul>
+  </footer>
+</body>

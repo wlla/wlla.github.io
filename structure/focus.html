@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Visible Focus</title>
+  <meta name="description" content="Accessibility testing">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<!--  <link rel="stylesheet" href="style.css">-->
+  <link rel="icon" type="image/png" sizes="96x96" href="assets/favicon.png">
+  <link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+<body class="full">
+  <header class="header">
+    <ul class="nav-list">
+      <li><a href="../home.html">Home</a></li>
+      <li><a href="../resources.html">Resources</a></li>
+      <li><a href="../media.html">Media</a></li>
+      <li><a href="../documents.html">Documents</a></li>
+      <li><a href="../structure.html">Structure</a></li>
+      <li><a href="../components.html">UI Components</a></li>
+      <li><a href="../text.html">Text</a></li>
+    </ul>
+  </header>
+  <nav aria-label="Secondary" class="secondary">
+    <ul>
+      <li><a href="regions.html">Regions</a></li>
+      <li><a href="headings.html">Headings</a></li>
+      <li><a href="lists-tables.html">Lists & Tables</a></li>
+      <li><a href="navigation.html">Navigation</a></li>
+      <li><a href="focus.html">Focus</a></li>
+      <li><a href="reading-order.html">Reading Order</a></li>
+      <li><a href="titles-language.html">Titles & Language</a></li>
+    </ul>
+  </nav>
+  <main class="main">
+    <h1>Focus</h1>
+    <p>Focus is the focus of your computer or software's attention. When something is in focus, it can be controlled or used. On the web, when a link is in focus, hitting enter will open the linked page.</p>
+    <h2>Managing Focus</h2>
+    <p>Things that can receive focus are part of the tab order of the page. In HTML, the tab order is built from the order of elements in the HTML source document. (These create the document object model and then the accessibility tree.) The <code>tabindex</code> attribute can add to or manipulate the tab order. Never use a <code>tabindex</code> of greater than 0. It will create all sorts of unexpected behavior. If you think you need a positive tabindes, what you actually need is to rewrite your HTML.</p>
+    <p>There might be a situation where it is useful to add a tabindex of 0 or -1 to a static object that doesn't usually receive focus. Adding these just means the object can receive focus, including visible focus. A tabindex of 0 means the object is formally in the tab order and will receive focus if a user is tabbing through the full page. A tabindex of -1 means the object won't receive focus if tabbing through the regular page, but will receive focus if is explicitly pointed to, as with an anchor or link.</p>
+    <p>Focus should be handled predictably; when a page is dynamic, there might be a tendency to have the focus move. As much as possible keep focus in the user's control. Let's say you have a search interface with a set of filters and an "apply" button. When someone selects the "apply" button, let's say the the search results update dynamically with no page reload; in this case, focus should stay on the "apply" button. The person will know where they are on the page and won't be unexpectedly tossed into another spot.</p>
+    <h2>Visible Focus</h2>
+    <p>Visible focus is an outline that goes around a link or other component when it has focus. For instance, when the link in this paragraph has focus, it also has a thick, teal, rectangular border. Visible focus is critical for anyone visually accessing the page and navigating with a keyboard. Without visible focus, a user won't know where they are and what their actions their keyboard strokes will take. <a href="https://www.w3.org/WAI/WCAG21/quickref/#focus-visible">WCAG 2.4.7 Focus Visible</a> requires visible focus for keyboard navigation.</p>
+    <p>The outline shape of visible focus is determined by underlying HTML and CSS structures. </p>
+    <p>Web browsers provide visible focus by default, you get it for free! So if your website doesn't have it, it means you've intentionally take away this accessibility requirement. (Don't add <code>`outline:none`</code> anywhere in your code, since that CSS property will suppress visible focus.) Each browser uses a different style for their visible focus, it might be a black dashed outline or a solid blue outline.</p>
+    <h3>Visible Focus Color Contrast</h3>
+    <p>While browsers add in visible focus, the color contrast might not necessarily be enough for everyone to perceive. You can build in focus styles that are more vigorous and percivable than a browsers default. When you do, make sure the visible focus and background have a contrast ratio of at least 3:1 to keep it in line with <a href="https://www.w3.org/WAI/WCAG21/quickref/?showtechniques=247#non-text-contrast">1.4.11 Non-text Contrast</a>. The <a href="https://www.w3.org/WAI/WCAG21/Understanding/non-text-contrast.html">Understanding Non-Text Contrast article</a> has more details.</p>
+    <p>On this webpage, the teal (#008080) visible focus for links appears on a white (#FFFFFF) background so the contrast ratio is 4.77:1. The background of the site's footer is grey so instead of using teal, which wouldn't have strong contrast, the visible focus color is white; this combo has a 11.72:1 contrast ratio.</p>
+    <h3>Magnification & Visible Focus</h3>
+    <p>MAGic screen magnifying software lets a user turn on souped up visible focus.</p>
+    <h3>Checking Visible Focus</h3>
+    <p>With visible focus, it's easiest to have developers and designers programmatically check that the styling of visible focus follows these requirements. Visual checks for visible focus won't be as thorough. The aXe tools will tell you if the <code>`outline:none`</code> styling is present.</p>
+    <p>Remember to check the visible focus contrast colors during QA.</p>
+  </main>
+</body>

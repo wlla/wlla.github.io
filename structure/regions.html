@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Regions</title>
+  <meta name="description" content="Accessibility testing">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<!--  <link rel="stylesheet" href="style.css">-->
+  <link rel="icon" type="image/png" sizes="96x96" href="assets/favicon.png">
+  <link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+<body class="full">
+  <header class="header">
+    <ul class="nav-list">
+      <li><a href="../home.html">Home</a></li>
+      <li><a href="../resources.html">Resources</a></li>
+      <li><a href="../media.html">Media</a></li>
+      <li><a href="../documents.html">Documents</a></li>
+      <li><a href="../structure.html">Structure</a></li>
+      <li><a href="../components.html">UI Components</a></li>
+      <li><a href="../text.html">Text</a></li>
+    </ul>
+  </header>
+  <nav aria-label="Secondary" class="secondary">
+    <ul>
+      <li><a href="regions.html">Regions</a></li>
+      <li><a href="headings.html">Headings</a></li>
+      <li><a href="lists-tables.html">Lists & Tables</a></li>
+      <li><a href="navigation.html">Navigation</a></li>
+      <li><a href="focus.html">Focus</a></li>
+      <li><a href="reading-order.html">Reading Order</a></li>
+      <li><a href="titles-language.html">Titles & Language</a></li>
+    </ul>
+  </nav>
+  <main class="main">
+    <h1>DRAFT - Regions</h1>
+    <p>Consider this webpage. Think about when you first visited. You probably scaned it and got a sense of the different high level sections of the page: the header, navigation sections, and the main section. Depending on where you came from you then focused on one of those areas to complete your task be it read about regions or navigate to another section.</p>
+    <p>In HTML, these high level chunks of the page are landmark regions. You scan scan them with a screenreader or visually. To make sure that they are available to assistive technologies, you need to make sure that you are semantically marking up your landmark regions.</p>
+    <h2>Landmark Regions</h2>
+    <p>You can create semantic landmark regions with HTML5 elements and ARIA landmark roles. You should only use the ARIA roles if there is no equivalent landmark region in HTML5.</p>
+    <p>Using certain HTML5 sectioning elements, like <code>header</code> or <code>main</code>, will automatically create a landmark region. WIth ARIA you add landmark role attributes to an element to create a landmark region. Add the <code>role</code> attribute and define it with one of the eight ARIA roles: banner, navigation, main, complimentary, contentinfo, search, form, application. Application role is tricky and changes keyboard behavior.</p>
+    <h3>Landmark Region Guidelines</h3>
+    <p>Make sure all the content of a webpage is within a region.</p>
+    <p>Some types of landmark regions, you should only use once at the top level, some can be used multiple times.</p>
+    <p>Similar to headings, think about what is a manageable and useful number of landmark regions. A simple page probably won't have 20 regions.</p>
+    <p>Every webpage should have a <code>`main`</code> and one <code>`main`</code> only.</p>
+    <p>The main region is often the target of a skip link.</p>
+    <h3>Naming Landmark Regions</h3>
+    <p>When you have multiple regions of the same type or when you are using a generic region type like <code>section</code> create an accessible name. Add a unique and descriptive label with an <code>aria-label</code> or <code>aria-labelledby</code> attribute.</p>
+    <p>For example, this page has a navigation region with links to all the pages in the Structure section of the site. I've added an <code>aria-label="Secondary"</code>. to make it more descriptive. A screenreader announces the name and the type of region so it is identified as "Secondary navigation region".</p>
+    <h3>Landmark Regions</h3>
+    <table>
+      <thead>
+        <th scope="col">Type</th>
+        <th scope="col" >HTML5</th>
+        <th scope="col" >ARIA Role</th>
+        <th scope="col" >Level</th>
+        <th scope="col" >Notes</th>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Header</td>
+          <td><code>header</code></td>
+          <td><code>banner</code> (if descendent of <code>main</code>)</td>
+          <td></td>
+          <td>If used within region other than <code>main</code>, pertains to that respective region. Could be in an <code>article</code>, <code>aside</code>, <code>nav</code>, <code>section</code>.</td>
+        </tr>
+        <tr>
+          <td>Footer</td>
+          <td><code>footer</code></td>
+          <td><code>contentinfo</code> (in <code>body</code> element context</code>?</td>
+          <td></td>
+          <td>If used within region other than <code>main</code>, pertains to that respective region. Could be in an <code>article</code>, <code>aside</code>, <code>nav</code>, <code>section</code>.</td>
+        </tr>
+        <tr>
+          <td>Navigation</td>
+          <td><code>nav</code></td>
+          <td><code>navigation</code></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Main</td>
+          <td><code>main</code></td>
+          <td><code>main</code></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Complementary</td>
+          <td><code>aside</code></td>
+          <td><code>complementary</code></td>
+          <td></td>
+          <td>This region has info that is meaningful in own right and is separate from the main content, but supports the main content.</td>
+        </tr>
+        <tr>
+          <td>Article</td>
+          <td><code>article</code></td>
+          <td><code></code></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Section</td>
+          <td><code>section</code></td>
+          <td><code></code></td>
+          <td></td>
+          <td>Just generically announces as "region" needs a label.</td>
+        </tr>
+        <tr>
+          <td>Form</td>
+          <td><code>form</code></td>
+          <td><code></code></td>
+          <td></td>
+          <td>requires an accessible name with aria-label, aria-labelledby, title.</td>
+        </tr>
+        <tr>
+          <td>Search</td>
+          <td><code></code></td>
+          <td><code>search</code></td>
+          <td></td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2>Screenreaders & Regions</h2>
+    <p>With screenreaders, you can skim through all the regions in a page in order to navigate to important sections and get a sense of the page content (the way some users might visually scan for that info.) When navigation through the content of a page, a screenreader will also announce when you enter or leave a region.</p>
+    <p>A screenreader will announce the region type and, if there is one, region label.</p>
+    <p>There are keyboard shortcuts for skimming through all the regions in a page or through all the regions of a certain type in a page.</p>
+    <p>When you first navigate to a page with a screenreader, it may announce the total number of regions on a page. </p>
+    <!-- <p>Here is what NVDA might sound like when it visits this webpage for the first time.</p> -->
+    <h2>Assistive Technologies & Regions</h2>
+    <p>Assistive technologies can also mask certain landmark regions. Reader views might show a view of just the <code>main</code> element of the page. Reader views are often built into browsers on mobile, but a user could have similar settings for any device.</p>
+    <h2>Checking for Regions</h2>
+    <p>On webpages, you can check for headings with the WAVE tool or the aXe tools. You can also check with the visual bookmarklet. You can also check with a screenreader by skimming through regions</p>
+    <h2>Region Resources</h2>
+    <ul>
+      <li><a href="https://www.w3.org/TR/wai-aria-practices/examples/landmarks/index.html">W3C AIRA Landmarks</a></li>
+      <li><a href="https://www.w3.org/WAI/tutorials/page-structure/regions/">WAI Tutorial on Page Regions</a></li>
+    </ul>
+  </main>
+</body>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Images</title>
+  <meta name="description" content="Accessibility testing">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<!--  <link rel="stylesheet" href="style.css">-->
+  <link rel="icon" type="image/png" sizes="96x96" href="../assets/favicon.png">
+  <link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+<body class="full">
+  <header class="header">
+    <ul class="nav-list">
+      <li><a href="../home.html">Home</a></li>
+      <li><a href="../resources.html">Resources</a></li>
+      <li><a href="../media.html">Media</a></li>
+      <li><a href="../documents.html">Documents</a></li>
+      <li><a href="../structure.html">Structure</a></li>
+      <li><a href="../components.html">UI Components</a></li>
+      <li><a href="../text.html">Text</a></li>
+    </ul>
+</header>
+  <nav aria-label="Secondary" class="secondary">
+    <ul>
+      <li><a href="images.html">Images</a></li>
+      <li><a href="audio.html">Audio</a></li>
+      <li><a href="video.html">Video</a></li>
+      <li><a href="media-players.html">Media Players</a></li>
+    </ul>
+  </nav>
+  <main class="main">
+    <h1>Images</h1>
+    <p>All meaningful images need text providing equivalent description of the content.</p>
+    <h2>Simple Images</h2>
+    <p>In most digital technologies, the text alternatives for simple images are provided with alt text. In HTML, alt text for an <code>img</code> is included with the <code>alt</code> attribute. Alt text isn't exhaustive, it should be convey what the image is meant to convey. To help get to that, ask yourself: What, When, Where, Why (am I including this image)</p>
+    <p>Some additional guidance on alt text:</p>
+    <ul>
+      <li>Don't include quotation marks in alt text. (They can cause a screenreader to truncate the text.)</li>
+      <li>Only identify the material type if it is significant. The screenreader will announce that it is an image so starting alt text with "Image of..." is repetative. You may want to identify the format if it's meaningful. If for instance it is important that the image is a photo or etching or watercolor, then include that information.</li>
+      <li>Be concise: Think about writing alt text that could fit in a tweet with room to spare. Screenreader users want to get the information and move on. Also, alt text is read out all in one go without the finer control you find elsewhere to read just sections of the text.</li>
+    </ul>
+    <p>If an image is linked, the alt text should be meaningful link text. Imagine an company, Big Corp, that has social media icons in their footer. The icons link to the respective Big Corp social media profile. If you have an Instagram logo, the alt text "Camera" isn't useful. Instead, use alt text like "Big Corp on Twitter."</p>
+    <p>Some additional reasons you need alt text: Alt text is what displays if an image doesn't load. There are a couple reasons an image won't load: poor internet connection, user preferences, and security settings. Alt text are also scooped up as fuel for search engines, improving SEO.</p>
+    <p>When creating content, authors will often have the option to add a title and/or description field. It's the description field that pretty much always maps to and creates the alt text. (The title usually defines the text available by hovering over an image.)</p>
+    <h3>Simple Images & Screenreaders</h3>
+    <p>When you hit an image with a screenreader, it will announce the format (image) and the alt text, if there is any. If you haven't included an <code>alt</code> attribute, it will simply announce that it is in image and the user will have to wonder what it is. If you haven't included alt text and it's a link, the link url will be read out. If the image is decorative so you've included an empty alt attribute, the screenreader will ignore the image completely and skip right over it.</p>
+    <!-- <h2>SVGs</h2>
+    <p>SVGs, scalable vector graphics, are images created by telling a computer where to draw lines, shapes, and dots.</p> -->
+    <h2>Complex Images, Graphics, and Charts</h2>
+    <p>When you're working with complex images, graphics, and charts, standard alt text might not be enough. Remember, alt text should be short. When this is the case, you'll want to create alt text and a longer description. The longer description could take a couple different forms and be presented in a couple different ways. You could include it on another web page or as a download. The best bet would be to include it on the same page as the complex media. If you're presenting a bar chart of yearly sales, include a data table of the source data. The alt text should summarize what you're trying to convey and reference the longer description, for example "Yearly sales increased from 2014-2017, but started to drop off since. Data table in Appendix A."</p>
+    <p>With the <code>longdesc</code> attribute, you can link to the longer description. This attribute is only to link to that information, don't try to include the text of the longer description in the attribute.</p>
+    <p>The DIAGRAM center has resources on how to write good image description, including for complex images. They also have a POET tool to help learn good image description. <a href="http://diagramcenter.org/making-images-accessible.html">DIAGRAM Resources on complex image accessibility</a>.</p>
+    <!-- <p>Does this belong in this section? <a href="https://www.w3.org/TR/accname-1.1/">Accessible Name and Description Computation</a></p>
+    <p>Label hierarchy:</p>
+    <ol>
+      <li>aria-labelledby</li>
+      <li>aria-label</li>
+      <li>alt</li>
+      <li>title</li>
+    </ol> -->
+  </main>
+</body>

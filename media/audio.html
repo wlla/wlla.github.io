@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Audio</title>
+  <meta name="description" content="Accessibility testing">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<!--  <link rel="stylesheet" href="style.css">-->
+  <link rel="icon" type="image/png" sizes="96x96" href="../assets/favicon.png">
+  <link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+<body class="full">
+  <header class="header">
+    <ul class="nav-list">
+      <li><a href="../home.html">Home</a></li>
+      <li><a href="../resources.html">Resources</a></li>
+      <li><a href="../media.html">Media</a></li>
+      <li><a href="../documents.html">Documents</a></li>
+      <li><a href="../structure.html">Structure</a></li>
+      <li><a href="../components.html">UI Components</a></li>
+      <li><a href="../text.html">Text</a></li>
+    </ul>
+  </header>
+  <nav aria-label="Secondary" class="secondary">
+    <ul>
+      <li><a href="images.html">Images</a></li>
+      <li><a href="audio.html">Audio</a></li>
+      <li><a href="video.html">Video</a></li>
+      <li><a href="media-players.html">Media Players</a></li>
+    </ul>
+  </nav>
+  <main class="main">
+    <h1>Audio</h1>
+    <h2>Players</h2>
+    <p>Be sure to share audio through an accessible interface. <a href="media-players.html">Read more on the Media Players page</a>.</p>
+    <h2>Audio Content</h2>
+    <p>Audio must have a transcript. The benefits of providing transcripts are numerous. They are essential for someone who is Deaf or Deaf-Blind. They can be used by someone just learning the language of the content. They allow all users to be multi-modal in their consumption of the content. They allow for text search of the content. They improve access to scholars. They improve SEO. I'll stop there, but transcripts are great.</p>
+    <h2>Prerecorded Audio</h2>
+    <p>Prerecorded audio are required to have transcripts. A transcript identifies speakers and contains text of all the speech and meaningful sound. Meaningful sounds include sound effects, clapping, laughter, etc.</p>
+    <p>You can present a transcript as plain text in webpage or in a document. Time-stamped transcripts can be presented in a variety of formats including WebVTT.</p>
+    <h2>Transcription Tools</h2>
+    <p>Technology for computer generated transcription is improving every day. It's starting to be incorporated into more products, Google Chat for example.</p>
+    <h3>CADET - Caption And Description Editing Tool</h3>
+    <p>Free tool for creating writing captions and video description tracks. Tool will let you know estimated speech time for text so you can write scripts to fit into a tracks quite periods. Once you write video description, you will want to narrate it or turn it into computer synthesized speech tracks outside of the tool.</p>
+    <a href="http://ncamftp.wgbh.org/cadet/">CADET Info page</a>
+    <h2>Audio Controls</h2>
+    <p>Avoid having media that automatically plays. If you do have audio that automatically plays, you'll need to follow level AA success criteria: <a href="https://www.w3.org/WAI/WCAG21/quickref/?showtechniques=142#audio-control">WCAG 2.1 1.4.2 Audio Control</a>.</p>
+    <p>This success criteria requires that if you have audio that plays more than 3 seconds, a user must be able to pause or stop the audio, or they must be able to control the audio volume indepentently of their device's overall volume.</p>
+    <h2>Low or No Background Audio</h2>
+    <p>WCAG 2.1 1.4.7 Low or No Background Audio is a level AAA success criteria applying to certain audio-only content. This content must be:</p>
+    <ol>
+      <li>Audio-only</li>
+      <li>Primarily speech</li>
+      <li>Not an audio CAPTCHA or logo</li>
+      <li>Not musical in nature</li>
+    </ol>
+    <p>For this type of audio content, the success criteria says that either:</p>
+    <ul>
+      <li>There is no background noise.</li>
+      <li>You can turn off the background noise.</li>
+      <li>The background noise is 20 decibels lower, or about 4x quieter, than the foreground speech.</li>
+    </ul>
+  </main>
+</body>
