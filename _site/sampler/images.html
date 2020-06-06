@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Sampler Images</title>
+  <meta name="description" content="Accessibility testing">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<!--  <link rel="stylesheet" href="style.css">-->
+  <link rel="icon" type="image/png" sizes="96x96" href="https://wlla.github.io/assets/favicon.png">
+  <link rel="stylesheet" type="text/css" href="https://wlla.github.io/style.css">
+</head>
+<body class="full">
+  <header class="header">
+    <ul class="nav-list">
+      <li><a href="https://wlla.github.io/index.html" class="active">Back to Home</a></li>
+    </ul>
+    <!-- <ul class="nav-list">
+      <li><a href="https://wlla.github.io/index.html" class="active">Home</a></li>
+      <li><a href="https://wlla.github.io/resources.html">Resources</a></li>
+      <li><a href="https://wlla.github.io/media.html">Media</a></li>
+      <li><a href="https://wlla.github.io/documents.html">Documents</a></li>
+      <li><a href="https://wlla.github.io/structure.html">Structure</a></li>
+      <li><a href="https://wlla.github.io/components.html">UI Components</a></li>
+      <li><a href="https://wlla.github.io/text.html">Text</a></li>
+    </ul> -->
+</header>
+<article class="secondary">
+</article>
+<main class="main">
+  <h1>Sampler Images</h1>
+  <p>Page with set of different configurations of images: playing with things like alt text, titles, complext images.</p>
+  <p>When I was making this sample page I realized why quotes can't be in alt text. It has to do with HTML. In HTML there are elements, like <code>main</code>. They are enclosed in brackets and everything within them make up the element. Example: This text is in a <code>p</code> element and I can use quotes just fine: "case in point". Then the attributes that get assigned to elements are written different. Everything belonging to an attribute is wrapped in a quote. Example: aria-label="Cool label!". So when we use a quote in an alt text, the computers think that's the end of the attribute.</p>
+  <p>The sample image in this page was pulled from the Library of Congress's digitized collections. The item title is <a href="https://www.loc.gov/resource/mrg.05378/">"Old gas station-Taco Loco, Harlingen, Texas."</a></p>
+  <h2>Samples without images</h2>
+  <p>There is a version of this page with all the same samples, but with photos intentionally broken so they do not appear. This is to see how these combos would appear to someone with a not-so-powerful internet connection or who doesn't load images.</p>
+  <p><a href="willaarmstrong.com/sampler/images-without-images.html">Image sampler page without images.</a></p>
+  <h2>Samples!</h2>
+  <h3>Image with quotes in alt text</h3>
+  <p>In this sample, the image:</p>
+  <ul>
+    <li>Image has alt text: "Alt: The "Taco Loco" Shop"</li>
+    <li>Image has title: "Title: The "Taco Loco" Shop"</li>
+  </ul>
+  <img src="https://wlla.github.io/assets/taco-loco.jpg" alt="Alt: Photograph of white building with red lettering reading "Taco Loco"" title="Title: The "Taco Loco" Shop">
+  <h3>Figure & Caption with referenced long description</h3>
+  <p>In this sample, the image:</p>
+  <ul>
+    <li>Image is in figure</li>
+    <li>Image has figcaption: Caption: Taco Loco, Harlingen, Texas</li>
+    <li>Image has alt text: "Alt: Taco Loco Shop, long description follows in Image description section"</li>
+    <li>Image has title: "Title: Taco Loco"</li>
+    <li>Image has longdesc tag: ""</li>
+    <li>Image is followed by an Image Description (h4) and long description</li>
+  </ul>
+  <figure>
+    <img src="https://wlla.github.io/assets/taco-loco.jpg" alt="Alt: Taco Loco shop, long description follows in Image Description section." longdesc="willaarmstrong.com/sampler/images.html#image-description" title="Title: Taco Loco">
+    <figcaption>Caption: Taco Loco, Harlingen, Texas</figcaption>
+  </figure>
+  <h4 id="image-description">Image Description</h4>
+  <p>Photograph of a small building sitting in and empty lot. Grass is growing through cracks in the cement. Behind the building, the lot ends in a clear line with a chain link fence. To the viewers left is a low building, painted a deep and bright yellow, with a tin roof starting to rust. Directly behind the building and to the viewers right, are green trees and plants, some growing around and in front of the fence. Another low building sits in behind the foliage.</p>
+  <p>The building itself is in the center of photo, sitting at an angle so the viewer can see the front of the building towards the left and the side of the building towards the right. It is small, painted white, and was once used as a gas station. The building is one story in the adobe style, a facade adds decorative moldings on the top of the building and the tops of the front door, side door, and three windows. The font door and windows are covered with black grills that have decorative curlicues and trim. In the front of the building, individual signs of red letters spell out "TACO LOCO". On the side of the building red spray paint spells out "Coming Soon." On the concrete in front of the buidling sits a messy pile of eight tires. The focus of the photo is sharp and the colors saturated.</p>
+  <h3>Figure & Caption with aria-describedby</h3>
+  <p>In this sample, the image:</p>
+  <ul>
+    <li>Image is in figure</li>
+    <li>Image has figcaption: Caption: Taco Loco, Harlingen, Texas</li>
+    <li>Image has alt text: "Alt: Taco Loco Shop, long description in Image description section"</li>
+    <li>Image has title: "Title: Taco Loco"</li>
+    <li>Image has aria-describedby referencing id of Long Description h3</li>
+  </ul>
+  <figure>
+    <img src="https://wlla.github.io/assets/taco-loco.jpg" alt="Alt: Taco Loco shop, long description in Image Description section." describedby="image-description" title="Title: Taco Loco">
+    <figcaption>Caption: Taco Loco, Harlingen, Texas</figcaption>
+  </figure>
+  <h3>Figure & Caption with aria-details</h3>
+  <p>In this sample, the image:</p>
+  <ul>
+    <li>Image is in figure</li>
+    <li>Image has figcaption: Caption: Taco Loco, Harlingen, Texas</li>
+    <li>Image has alt text: Alt: Taco Loco Shop, long description in Image description section</li>
+    <li>Image has title: Title: Taco Loco</li>
+    <li>Image has aria-details referencing id of Long Description h3</li>
+  </ul>
+  <figure>
+    <img src="https://wlla.github.io/assets/taco-loco.jpg" alt="Alt: Taco Loco shop, long description in Image Description section." aria-details="image-description" title="Title: Taco Loco">
+    <figcaption>Caption: Taco Loco, Harlingen, Texas</figcaption>
+  </figure>
+  <h3>Figure & Caption with quotes in caption</h3>
+  <p>In this sample, the image:</p>
+  <ul>
+    <li>Image is in figure</li>
+    <li>Image has figcaption: "Caption: Store with sign "Taco Loco""</li>
+    <li>Image has alt text: "Alt: Store with sign "Taco Loco"</li>
+    <li>Image has title: "Title: Store with sign "Taco Loco""</li>
+  </ul>
+  <figure>
+    <img src="https://wlla.github.io/assets/taco-loco.jpg" alt="Alt: Store with sign "Taco Loco"" title="Title: Store with sign "Taco Loco"">
+    <figcaption>"Caption: Store with sign "Taco Loco""</figcaption>
+  </figure>
+  <h3>Figure & Caption with Figure and Caption linked</h3>
+  <p>In this sample, figure and caption are wrapped in a link.</p>
+  <a href="https://www.loc.gov/resource/mrg.05378/"><figure>
+    <img src="https://wlla.github.io/assets/taco-loco.jpg" alt="Alt: Store with sign Taco Loco" title="Title: Taco Loco">
+    <figcaption>"Caption: Store with sign "Taco Loco""</figcaption>
+  </figure></a>
+  <h3>Figure & Caption with just Figure linked</h3>
+  <p>In this sample, figure and caption are wrapped in a link.</p>
+  <figure>
+    <a href="https://www.loc.gov/resource/mrg.05378/"><img src="https://wlla.github.io/assets/taco-loco.jpg" alt="Alt: Store with sign Taco Loco" title="Title: Taco Loco"></a>
+    <figcaption>"Caption: Store with sign "Taco Loco""</figcaption>
+  </figure>
+</main>
+</body>

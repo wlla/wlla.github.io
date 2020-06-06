@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Links & Buttons | Willabrarian</title>
+  <meta name="description" content=Accessibility, WCAG, Components, Keyboard Accessibility>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" sizes="96x96" href="https://wlla.github.io/assets/favicon.png">
+  <!--  <link rel="stylesheet" href="style.css">-->
+  <link rel="stylesheet" type="text/css" href="https://wlla.github.io/style.css">
+</head>
+<body class="full">
+<header class="header">
+  <ul class="nav-list">
+    
+      <li><a href="https://wlla.github.io/index">Home</a></li>
+      <li><a href="https://wlla.github.io/resources">Resources</a></li>
+      <li><a href="https://wlla.github.io/media">Media</a></li>
+      <li><a href="https://wlla.github.io/documents">Documents</a></li>
+      <li><a href="https://wlla.github.io/structure">Structure</a></li>
+      <li><a href="https://wlla.github.io/components">UI Components</a></li>
+      <li><a href="https://wlla.github.io/text">Text</a></li>
+  </ul>
+</header>
+
+<nav aria-label="Secondary" class="secondary">
+  <ul>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+        <li><a href="https://wlla.github.io/components/labels-instructions">Labels & Instructions</a></li>
+      
+      
+        <li><a href="https://wlla.github.io/components/links-buttons">Links & Buttons</a></li>
+      
+      
+        <li><a href="https://wlla.github.io/components/forms">Forms</a></li>
+      
+      
+        <li><a href="https://wlla.github.io/components/search">Search</a></li>
+      
+      
+        <li><a href="https://wlla.github.io/components/modals">Modals</a></li>
+      
+      
+      
+      
+      
+      
+  </ul>
+</nav>
+
+
+  <main class="main">
+    <h1>Links & Buttons - DRAFT</h1>
+        <p>The primary function of links is take you to a new page and of buttons is to take action. (I say primary because submitting a form might result in navigating to another page, but the main action is that you're sending in your form responses anything else is secondary.) In HTML, always use an <code>a</code> element for a link and a <code>button</code> element for a button.</p>
+    <p>Doorbells are buttons and doors are links. The design of doorbells and doors help people tell them apart and know that they aren't wreaths or mailboxes.</p>
+    <h2>Links</h2>
+    <p>Link text should be meaningful. This means no "Click here" or "Read more". Ideally, you should be able to pull the link text out of context and know where it goes.</p>
+    <p>If an image is a link, the alt text will be used as the link text so write is as meaningful link text.</p>
+    <p>Reduce duplicate links that have the same target. Link to a somewhere once, if you can. Linking twice means a person has to figure out what the difference between each is. And if they are skimming or searching the page it adds to the clutter, especially for someone using a screen reader.</p>
+    <!-- <p>when you have a situation like multiple "reserve" links to an events search page.</p> -->
+    <p>Everything you wrap in an <code>a</code> attribute will be announced as the link text. Keep this in mind when making a unit like a section or card linkable. You may want to wrap the <code>a</code> around a shorter, more meaningful line of text within the unit and use CSS to make the area of the link target cover the full unit.</p>
+    <h3>Visual Design of Links</h3>
+    <p>Always set links apart from static text and use more than just color to do so. Underlining (text decoration underscore) is added by browsers by default and most users scan for that formatting. Just leave it in for most links. We want people to know about links, it's the point of the world wide web, so don't get too subtle.</p>
+    <p>Sometimes, if a set of links are navigational, you might use formatting conventions for navigation. That's okay, just always make sure this formatting is unique from formatting of static text. For instance, the secondary navigation links on this page are formatted as a menu. (These are on the left-side of the page in larger viewports and the top of the page in smaller viewports.) The menus has padding, borders, and seperate styling for hover and focus.</p>
+    <h3>Relative versus Absolute Links</h3>
+    <p>Always use absolute links. The url for this webpage first includes some information on the protocols of the site and the site's main address. Then there is information about the actual page you want pulled up. A relative link is a link that tells the computer what page you want to go to; it works when you are already on the main website, the computer just assumes all that beginning information.</p>
+    <p>Roughly, a domain is like a town, the page address is like a street, and an in-page link is a particular building on the street. A relative url only works if you're already in the town. Absolute links are the full url you type into an address bar. They include the site name and the page name.</p>
+    <p>Always use absolute links.</p>
+    <h3>In-Page Links</h3>
+    <p>One use of links is to create in-page shortcuts. This is okay, but remember to make it very clear that a link is an in-page link. Also, you want to make sure that the link works for everybody, not just visual users. You can add <code>tab-index=-1</code> to your target to make sure that the focus goes there. For instance, I added a "Back to top" link on the bottom of the page. The target is the h1 of this page, I added the tab index to the h1 to make sure focus can latch onto it for everybody.</p>
+    <h3>Identify link format</h3>
+    <p>Some links open a new webpage and some links download a file. If a link opens a new format, like a jpeg, pdf, or word document, include that information in the link text. By writing something like "Annual Report (PDF)", users know to expect...a PDF!</p>
+    <h3>Screenreaders & Links</h3>
+    <p>When you hit a link with a screenreader, the screenreader will announce that it is a link. So, you don't need to include any identifying information like that in the link text. With a screenreader, a user can skip through all the links on a page. In Jaws, you can pull up all the links on a page. Jaws will also let a user know if the link is visited or unvisited.</p>
+    <h2>Buttons</h2>
+    <p>Buttons should be straight-forward.</p>
+    <button type="button" name="button">Button!</button>
+    <p>Don't create a button using an image with a <code>role="button"</code> attribute. Any text in the image won't meet requirements for legibility on magnification.</p>
+    <p>Including an icon in your button may be useful, but add it as an SVG so it scales well. If the icon doesn't add additional meaning</p>
+    <p>There is a more information is covered in the <a href="labels-instructions.html">Labels & Instructions page</a>.</p>
+    <h3>Screenreaders & Buttons</h3>
+    <p>When you hit a button with a screenreader, it will announce the label and identify it as a button. With shortcuts, a person can skim and search through all the buttons on a page.</p>
+    <a href="#h1">Back to Top</a>
+
+  </main>
+
+</body>
+</html>
+

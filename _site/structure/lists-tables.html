@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Lists & Tables | Willabrarian</title>
+  <meta name="description" content=Accessibility, WCAG, Components, Keyboard Accessibility>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" sizes="96x96" href="https://wlla.github.io/assets/favicon.png">
+  <!--  <link rel="stylesheet" href="style.css">-->
+  <link rel="stylesheet" type="text/css" href="https://wlla.github.io/style.css">
+</head>
+<body class="full">
+<header class="header">
+  <ul class="nav-list">
+    
+      <li><a href="https://wlla.github.io/index">Home</a></li>
+      <li><a href="https://wlla.github.io/resources">Resources</a></li>
+      <li><a href="https://wlla.github.io/media">Media</a></li>
+      <li><a href="https://wlla.github.io/documents">Documents</a></li>
+      <li><a href="https://wlla.github.io/structure">Structure</a></li>
+      <li><a href="https://wlla.github.io/components">UI Components</a></li>
+      <li><a href="https://wlla.github.io/text">Text</a></li>
+  </ul>
+</header>
+
+<nav aria-label="Secondary" class="secondary">
+  <ul>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+        <li><a href="https://wlla.github.io/structure/regions">Regions</a></li>
+      
+      
+        <li><a href="https://wlla.github.io/structure/headings">Headings</a></li>
+      
+      
+        <li><a href="https://wlla.github.io/structure/lists-tables">Lists & Tables</a></li>
+      
+      
+        <li><a href="https://wlla.github.io/structure/navigation">Navigation</a></li>
+      
+      
+        <li><a href="https://wlla.github.io/structure/focus">Focus</a></li>
+      
+      
+        <li><a href="https://wlla.github.io/structure/reading-order">Reading Order</a></li>
+      
+      
+        <li><a href="https://wlla.github.io/structure/titles-languages">Titles & Languages</a></li>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+  </ul>
+</nav>
+
+
+  <main class="main">
+    <h1>Lists & Tables - DRAFT</h1>
+        <p>Lists and tables organize information in specific ways. They need to be marked up semantically. On the web this means using appropriate HTML; in document formats, this means using semantic styles and mark-up.</p>
+    <p>Lists are any grouped set of things. Tables are a very specific format that is only ever be used for tabular data.</p>
+    <h2>Lists</h2>
+    <p>There are three types of lists: ordered, unordered, and definition lists</p>
+    <p>Feel free to nest lists, but make sure to do it semantically.</p>
+    <p>On the web, you can title a list with the <code>aria-label</code> or <code>aria-labelledby</code> attributes.</p>
+    <p>With CSS, you can customize how lists display, but the principles of being a set of things remains. On this web page, the header navigation links and the secondary navigation links are both organized in lists, but appear differently in the visual styling. For both, each link is a list item. In the header all the list items appear in the same horizontal line In the second ary navigation, the list items are organized in a column.</p>
+    <p>While the visual design is different it conveys the same message as as the semantic structure: these are a set of things. What you don't want to do is use CSS to make something *look* like a list without making it a semantic list.</p>
+    <h3>Unordered & Ordered Lists</h3>
+    <p>Unordered lists might be the most common type of lists. The header and secondary navigation sections of this webpage are organized as unordered lists.</p>
+    <p>Ordered lists are sequential. List items are organized by orders of numbers, letters, or Roman numberals.</p>
+    <h3>Definition Lists</h3>
+    <p>A definition list is a slightly more complex. This is a list where each item is made up of a key pair: a term and that term's definition.</p>
+    <p>In a library catalog, you might use a definition list in a catalog record when dealing with metadata. The metadata field label would be the term and the entry would be the definition.</p>
+    <p>I have organized the <a href="../resources/words-phrases.html">Words and Phrases</a> page as a definition list.</p>
+    <h3>Screenreaders & Lists</h3>
+    <p>When you hit a list with a screenreader, the screenreader will that it is a list and the total number of list items. There are keyboard shortcuts for navigating through items on a list and for navigating to all the lists on a page. As you move through the items in a list, the screenreader may also tell you the order of that item in the list.</p>
+    <h2>Tables</h2>
+    <p>Never use a table to organize things visually!! Only use tables to organize and present tabular data.</p>
+    <p>A table has headers and data cells. Be sure to mark them up accordingly. On the web, always use a <code>scope</code> attribute for headers. (This attribute tells assistive technology if the header labels a row or a column.) With tables, you can add a caption describing the table content and summary explaining the table structure.</p>
+    <p>If you find you're making a table with multiple rows of headers, take a step back. You probably should be making multiple tables each with fewer headings.</p>
+    <h3>Screenreader & Tables</h3>
+    <p>When you hit a table with a screenreader, the screenreader will announce that it is a table. Depending on your screenreader settings, each cell may also be announced with its associated header. (As long as you have correctly marked up the table and used the scope attribute.)</p>
+    <h3>Table Resources</h3>
+    <ul>
+      <li><a href="https://www.w3.org/WAI/tutorials/tables/">WAI Tutorial on Tables</a></li>
+    </ul>
+
+  </main>
+
+</body>
+</html>
+

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Reading order | Willabrarian</title>
+  <meta name="description" content=Accessibility, WCAG, Components, Keyboard Accessibility>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" sizes="96x96" href="https://wlla.github.io/assets/favicon.png">
+  <!--  <link rel="stylesheet" href="style.css">-->
+  <link rel="stylesheet" type="text/css" href="https://wlla.github.io/style.css">
+</head>
+<body class="full">
+<header class="header">
+  <ul class="nav-list">
+    
+      <li><a href="https://wlla.github.io/index">Home</a></li>
+      <li><a href="https://wlla.github.io/resources">Resources</a></li>
+      <li><a href="https://wlla.github.io/media">Media</a></li>
+      <li><a href="https://wlla.github.io/documents">Documents</a></li>
+      <li><a href="https://wlla.github.io/structure">Structure</a></li>
+      <li><a href="https://wlla.github.io/components">UI Components</a></li>
+      <li><a href="https://wlla.github.io/text">Text</a></li>
+  </ul>
+</header>
+
+<nav aria-label="Secondary" class="secondary">
+  <ul>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+        <li><a href="https://wlla.github.io/structure/regions">Regions</a></li>
+      
+      
+        <li><a href="https://wlla.github.io/structure/headings">Headings</a></li>
+      
+      
+        <li><a href="https://wlla.github.io/structure/lists-tables">Lists & Tables</a></li>
+      
+      
+        <li><a href="https://wlla.github.io/structure/navigation">Navigation</a></li>
+      
+      
+        <li><a href="https://wlla.github.io/structure/focus">Focus</a></li>
+      
+      
+        <li><a href="https://wlla.github.io/structure/reading-order">Reading Order</a></li>
+      
+      
+        <li><a href="https://wlla.github.io/structure/titles-languages">Titles & Languages</a></li>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+  </ul>
+</nav>
+
+
+  <main class="main">
+    <h1>Reading order - DRAFT</h1>
+          <p>Reading order is the order of things on a page. Note: in digital technologies, this can be different from the order things are visually presented on a page. This is because styling can be applied to manipulate visual placement. (Often this styling is applied with CSS and Javascript.)</p>
+      <p>We need to make sure that the visual and progrrammatic styling are synchronized. For instance, if I published an English language newsletter that has two columns, I want a screenreader to know it should read the heading first, then the left hand column, then the right hand column.</p>
+      <p>In something like Word, this is usually taken care of for you. In something like PowerPoint, you might need to set the reading order by organizing a list of the grouped items on the page.</p>
+      <p>In HTML, the reading order is the order of elements in the HTML source document. These are picked up by the Document Object Model (DOM) that creates the Accessibility Tree that assistive technologies read to get reading order.</p>
+      <h3>Tabindex</h3>
+      <p>Reading order can also be mainpulated by <code>tabindex</code>, an HTML attribute. This attribute manipulates and overwrites the natural order of the page and which elements receive focus. You should never, ever use a `tab-index` greater than 0. Using a tabindex greater than 0 will cause all sorts of unexpected behavior in the reading order.</p>
+      <p>There might be a situation where it is useful to add a tabindex of 0 or -1 to a static object that doesn't usually receive focus. Adding these just means the object can receive focus, including visible focus. A tabindex of 0 means the object is formally in the tab order and will receive focus if a user is tabbing through the full page. A tabindex of -1 means the object won't receive focus if tabbing through the regular page, but will receive focus if is explicitly pointed to, as with an anchor or link.</p>
+      <!-- <h4>Tab Index Example</h4>
+      <p>In this example</p>
+      <p tabindex="0">Example of text with tab index of 0.</p>
+      <p id="#tab-1-example" tabindex="-1">Example of text with tab index of -1.</p>
+      <p tabindex="0">Second example of text with tab index of 0.</p>
+      <p><a href="#tab-1-example">Link to Example of text with tab index of -1</a></p> -->
+      <h2>Checking Reading Order</h2>
+      <p>There are a couple of ways you can check reading order.</p>
+      <ul>
+        <li>aXe will flag the use of any tabindices greater than zero. Figure out what they were trying to accomplish; then get rid of them and accomplish that accessibly.</li>
+        <li>Check with assistive technology by reading with a screenreader; you can check the tab order by tabbing through the page, but this won't give you the full reading order of all the elements on the page.</li>
+        <li>WAVE will let you check the reading order by skimming the unstyled page. You can also do this by turning off the stylesheet.</li>
+      </ul>
+
+  </main>
+
+</body>
+</html>
+

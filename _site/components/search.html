@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Search | Willabrarian</title>
+  <meta name="description" content=Accessibility, WCAG, Components, Keyboard Accessibility>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" sizes="96x96" href="https://wlla.github.io/assets/favicon.png">
+  <!--  <link rel="stylesheet" href="style.css">-->
+  <link rel="stylesheet" type="text/css" href="https://wlla.github.io/style.css">
+</head>
+<body class="full">
+<header class="header">
+  <ul class="nav-list">
+    
+      <li><a href="https://wlla.github.io/index">Home</a></li>
+      <li><a href="https://wlla.github.io/resources">Resources</a></li>
+      <li><a href="https://wlla.github.io/media">Media</a></li>
+      <li><a href="https://wlla.github.io/documents">Documents</a></li>
+      <li><a href="https://wlla.github.io/structure">Structure</a></li>
+      <li><a href="https://wlla.github.io/components">UI Components</a></li>
+      <li><a href="https://wlla.github.io/text">Text</a></li>
+  </ul>
+</header>
+
+<nav aria-label="Secondary" class="secondary">
+  <ul>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+        <li><a href="https://wlla.github.io/components/labels-instructions">Labels & Instructions</a></li>
+      
+      
+        <li><a href="https://wlla.github.io/components/links-buttons">Links & Buttons</a></li>
+      
+      
+        <li><a href="https://wlla.github.io/components/forms">Forms</a></li>
+      
+      
+        <li><a href="https://wlla.github.io/components/search">Search</a></li>
+      
+      
+        <li><a href="https://wlla.github.io/components/modals">Modals</a></li>
+      
+      
+      
+      
+      
+      
+  </ul>
+</nav>
+
+
+  <main class="main">
+    <h1>Search - DRAFT</h1>
+        <h2>Search Region</h2>
+    <p>Add a <code>role="search"</code> to the section of the page with search. This should include elements like the search input and button, as well as any filters, and the search result sets.</p>
+    <p>Using this attribute will create a search landmark role. Attach an aria-label or aria-labelledby to create a more descriptive region name or if there are multiple search regions on the page. (For example, if you have a site search and a catalog search.)</p>
+    <h2>Search Filters</h2>
+    <p>Search filters can apply automatically or they can wait to be applied til the user selects an apply button. There are pros and cons to both options.</p>
+    <p>Researchers often want to apply a number of filters at once.</p>
+    <h2>Single Page Applications versus New Page Load</h2>
+    <p>Single page applications (SPA) describes a way of working with websites and data. With single page applications, only the information changes. You can have a single page application with dynamic or applied filters.</p>
+    <h2>Updating the User on Search Results</h2>
+    <p>People need to know that search results have changed. If your search results cause a page reload, the user will have the standard information available when navigating to a new page.</p>
+    <p>In other cases, you'll want to use an <code>aria-live</code> region. Make it polite; make sure it's always there. Typically you'd use something like the "N results found".</p>
+    <h2>Managing Focus</h2>
+    <p>Pay attention to your focus management. When a user applies filters, keep the focus in the same place. Avoid changing where focus is; it is disorienting to the user. In some cases, where the filter options change, you may have to move the focus because the list changes. If that's the case, keep focus as close as possible.</p>
+    <h2>Search Organization</h2>
+    <p>Organize search results in a list. Generally, each item in a search result would have a heading level.</p>
+    <h2>Persistence of Search Terms</h2>
+    <p>Try to incorporate the search term in the page. Sometimes you'll find a search interface where the search term is only available in the search bar, similar to placeholder text. It's better to make it a fixed part of the page. One pattern is to include it in the total search results messaging eg "45 results found for "Seaweed"".</p>
+    <h3>Error messages</h3>
+    <p>Put some thought into your "no results found" message. If you can, add in functionality like search suggestion, ie "did you mean to search for", to help with spelling errors. Give users tips on how get search results, for example "try removing some filters".</p>
+
+  </main>
+
+</body>
+</html>
+

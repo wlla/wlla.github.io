@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Assistive technology | Willabrarian</title>
+  <meta name="description" content=Accessibility, WCAG, Components, Keyboard Accessibility>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" sizes="96x96" href="https://wlla.github.io/assets/favicon.png">
+  <!--  <link rel="stylesheet" href="style.css">-->
+  <link rel="stylesheet" type="text/css" href="https://wlla.github.io/style.css">
+</head>
+<body class="full">
+<header class="header">
+  <ul class="nav-list">
+    
+      <li><a href="https://wlla.github.io/index">Home</a></li>
+      <li><a href="https://wlla.github.io/resources">Resources</a></li>
+      <li><a href="https://wlla.github.io/media">Media</a></li>
+      <li><a href="https://wlla.github.io/documents">Documents</a></li>
+      <li><a href="https://wlla.github.io/structure">Structure</a></li>
+      <li><a href="https://wlla.github.io/components">UI Components</a></li>
+      <li><a href="https://wlla.github.io/text">Text</a></li>
+  </ul>
+</header>
+
+<nav aria-label="Secondary" class="secondary">
+  <ul>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+        <li><a href="https://wlla.github.io/resources/assistive-technology">Assistive Technology</a></li>
+      
+      
+        <li><a href="https://wlla.github.io/resources/tools">Tools</a></li>
+      
+      
+        <li><a href="https://wlla.github.io/resources/words-phrases">Words and Phrases</a></li>
+      
+      
+        <li><a href="https://wlla.github.io/resources/standards">Standards</a></li>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+  </ul>
+</nav>
+
+
+  <main class="main">
+    <h1>Assistive technology - DRAFT</h1>
+        <p>Assistive technologies are tools. Glasses, elevators, and remote controls are all assistive technologies.</p>
+    <p>In a digital context, assistive technologies are hardware, software, and system settings that people use to access the web.</p>
+    <p>In addition to hardware, software, and system settings, a product might build localized tools for customization. This is a complex topic. Always prioritize building your product to work with the slew of existing assistive technology rather than your own bespoke one. Every now and then, someone will suggest tracking users of assistive technology. Don't do this, even if you feel your motivation is positive.</p>
+    <h2>Hardware</h2>
+    <p>A big category of assistive hardware is input devices; examples include a sip and puff, switch, stylus, joystick. These typically map to keyboard controls, which is why it is so important to make sure product (even apps) can be used with a keyboard.</p>
+    <p>Standing desks are assistive tech familiar to most in an office environment. Other ergonomic tools could be furniture like kneeling chairs.</p>
+    <h2>Software</h2>
+    <h3>Screen magnifiers</h3>
+    <p>Screen magnifiers do more than magnify. With a screen magnifier, you can enlarge a screen to your liking setting the change on either the entire screen or a selected portion. You can also manipulate the color and focus of the screen. With MAGic, a common screen magnifier, there are some read aloud functionalities as well.</p>
+    <p>When someone is using a screen magnifier they don't necessarily have the full page context. That's why it is important to consider how sections of a page work within the whole. For instance, you want a form's label to be close to the input.</p>
+    <h3>Voice recognition</h3>
+    <p>With Voice recognition software a user can navigate, create, and use digital materials with vocal inputs and commands. Dragon Naturally Speaking is an example of voice recognition software.</p>
+    <p>With voice recognition, a user will use UI labels in their commands. This is one reason it is important that an input name is programmatically linked with the UI component. This is also why we have rules about single character shortcuts.</p>
+    <h3>Screenreaders</h3>
+    <p>With screenreaders, a user navigates a digital interface and both the content and structure is announced. This means the computer will read out the content of a web page and announce structure types like links, headings, and page regions. The software output can be in synthesized speech or in braille, with a refreshable braille display.</p>
+    <p>Screenreaders are powerful softwares and users can use a number of shortcuts. For instance, with shortcuts a user can read through all the links in a webpage. Or, they could read through only the visited or unvisited links. When a webpage is properly coded, structural information like a websites header, main, and footer sections are available to a screenreader. Screenreaders controlled with keyboard inputs and, on mobile, gestures. Some screenreaders also support using mouse to contol the screenreader.</p>
+    <h4>Using a Screenreader</h4>
+    <p>Screenreaders are configurable; Users can manipulate reading speed, shortcuts, voice profiles, language, versbosity and more.</p>
+    <p>If you have never used a screenreader before and are interested in using it to test your product, remember to be patient with yourself. It's a new, complex technology. Keep in mind, you are learning  the controls and habits of a screenreader. So, as ever, be sure to work with your users as well, including users who use screenreaders.</p>
+    <p>Common combinations are Jaws on PC and IE or iOS and VoiceOver.</p>
+    <h3>Screenreader software</h3>
+    <table>
+      <caption>Table with information on common screenreaders.</caption>
+        <thead>
+          <tr>
+            <th scope=col>Software</th>
+            <th scope=col>Operating System</th>
+            <th scope=col>Cost</th>
+            <th scope=col>Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><a href="https://www.freedomscientific.com/products/software/jaws/">JAWS (Job Access with Speech)</a></td>
+            <td>Windows</td>
+            <td>$$</td>
+            <td><a href="https://support.freedomscientific.com/downloads/documentation">JAWs Documentation</a></td>
+          </tr>
+          <tr>
+            <td><a href="https://www.nvaccess.org/download/">NVDA</a></td>
+            <td>Windows</td>
+            <td>By donation</td>
+            <td><a href="https://www.nvaccess.org/files/nvda/documentation/userGuide.html?">NVDA User guide</a></td>
+          </tr>
+          <tr>
+            <td>VoiceOver</td>
+            <td>iOS and Apple</td>
+            <td>Comes with Apple products.</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>TalkBack</td>
+            <td>Android</td>
+            <td>Comes with Android devices</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+      <h2>System settings</h2>
+      <p>System settings can be things like setting your default font size.</p>
+      <h2>Custom Built Software</h2>
+      <p>All the examples above are for solutions independent of  any given product. Some content creators take another route, purchasing third-party software that sits on top of their site and "provides" facisimilies of these assistive functionalites, like read aloud functionaliy. Or they may build in widgets to do things like "Use accessible colors."</p>
+      <p>This type of solution is not great. For one thing, instead of someone selecting a tool to use across sites, with every website a user would have to relearn how to navigate to their preference. For a host of reasons, I use PCs to do the vast majority of my personal and professional work. If everytime I went to a new webpage, it opened in a new browser or a new OS, I would have to spend time and energy learning new tools that aren't necessarily a good fit for me.</p>
+      <h2>Tracking Assistive Technology</h2>
+      <p>In your travels, you may hear a proposals involving detecing assistive technology usage, like a screenreader. Do not do this. Do not do this for a number reasons. It's unnecessary and against the philosophy of an inclusive web. If you build to digital standards, including WCAG, your product should be accessible; it won't matter what tools people are using to interact with it. It leads to behavior like suppressing certain features when a user is working with assistive technology. It can lead to thinking accessibility is a feature or arguments that only X% of your users benefit from it. (Remember, digital accessibility helps everyone!) Also, it's a violation of privacy.</p>
+      <p>If you are worried about how your product performs with assistive technology: test it with those technologies and test it with actually users of the technology. You'll get far more useful information by talking to your users.</p>
+      <!-- <h2>WebAim Survey's</h2> -->
+
+  </main>
+
+</body>
+</html>
+

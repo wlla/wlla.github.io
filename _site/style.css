@@ -1,0 +1,327 @@
+/*  letter-spacing: 1rem;*/
+/*----------classes----------*/
+:root {
+  --green-grey: #6e7571;
+  --dark-green-grey: #535654;
+  --pink: #c12e98;
+  --charcoal: #383838;
+  --light-rose: #E283C7;/*DE73C0*/
+  --confused-mauve: #89267f;
+  --straight-forward-green: #66A26A;
+  --teal: #008080;
+  --margin-left: 1rem;
+  --margin-right:3rem;
+}
+
+/*----------elements----------*/
+::selection {
+  background-color: var(--charcoal);
+  color: white;
+}
+body {
+  font-family: sans-serif;
+  color: var(--charcoal);
+  font-size: 18px;
+  max-width: 1060px;
+  margin: 0 auto;
+  /* padding: 0 1rem; */
+}
+main{
+  margin: 0rem 3rem 0 1rem
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--pink);
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-size: 2.3rem;
+}
+
+h2 {
+  border-bottom: 2px solid var(--charcoal);
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+}
+
+p {
+  line-height: 1.4;
+}
+
+button {
+  background-color: var(--teal);
+  color:white;
+  font-size: 1.2rem;
+  padding: .5rem 1rem;
+  border: 0;
+}
+
+button:focus{
+  outline:solid var(--charcoal);
+  outline-offset: .1em;
+}
+
+button:hover{
+  outline:solid var(--charcoal);
+  background-color: white;
+  color: var(--charcoal);
+  font-size: 1.2rem;
+  padding: .5rem 1rem;
+  border: 0;
+}
+
+a {
+  color:var(--pink);
+}
+
+a:focus{
+  outline:solid var(--teal);
+  outline-offset: .02em;
+}
+
+a:hover{
+  outline:solid var(--teal);
+}
+
+ul, ol{
+  padding: .2rem;/*removing default padding*/
+}
+
+ul li {
+  list-style-type: circle;
+  margin-top: .7rem;
+}
+
+ol li {
+  margin-top: .7rem;
+}
+
+pre {
+  font-family: monospace;
+}
+
+code {
+  font-weight: bold;
+}
+
+/* Tables */
+
+table {
+  border-collapse: collapse;
+  border: 2px solid var(--charcoal);
+}
+
+td {
+    border: 1px solid var(--charcoal);
+    padding: 7px 5px;
+    color: var(--charcoal);
+}
+
+th {
+    color: var(--charcoal);
+    border: 1px solid var(--charcoal);
+    border-bottom: 2px solid var(--charcoal);
+    padding: 7px 5px;
+    text-align: left;
+}
+
+caption {
+  color: var(--charcoal);
+}
+
+
+/*change alternating background colors of rows.
+tr:nth-child(even) td {
+    background-color: white;
+}
+
+tr:nth-child(odd) td {
+    background-color: var(--green-grey);
+*/
+/*----------classes----------*/
+
+.header {
+  background-color: var(--pink);
+  color:white;
+  font-size: 1.2rem;
+  padding-top: 15px;
+}
+
+.header li{
+  padding-right: 15px;
+}
+
+.header a{
+  padding: .2rem;
+  color: white;
+  text-decoration: none;
+  display: block;
+}
+
+.header a:focus{
+  outline: solid;
+}
+
+.header a:hover,
+.header a.active{
+  color: var(--pink);
+  background-color: white;
+  outline-color:teal;
+}
+
+.nav-list{
+  padding: 0;
+  list-style: none;
+  margin: 0 var(--margin-right) 0 var(--margin-left);
+}
+
+.nav-list li {
+  display: inline-block;
+}
+
+.example {
+  margin-left: 1.7rem;
+  outline-color: var(--straight-forward-green);
+}
+
+/* Styles for main lists */
+.main ul, ol{
+  margin-left: 2rem;
+}
+
+/* Styles for secondary nav */
+.secondary ul{
+  margin: 0 var(--margin-right) 0 var(--margin-left);
+  padding: 0;
+  list-style: none;
+  color: var(--charcoal);
+}
+
+.secondary li{
+  list-style: none;
+  outline: .05rem solid;
+}
+
+.secondary a{
+  color: var(--charcoal);
+  text-decoration: none;
+  padding: .7rem;
+  display: block;
+}
+
+.secondary li:hover a:hover{
+  color: white;
+  background-color: var(--charcoal);
+  outline: none;
+}
+
+.secondary img{
+  display: block;
+  width: 100%;
+}
+
+.secondary figcaption{
+  display: block;
+  width: 100%;
+  font-size: .7rem;
+  margin-top: .5rem;
+}
+
+.secondary a.fig {
+  color: var(--charcoal);
+  text-decoration: underline;
+  padding: 0;
+  display: block;
+}
+/*
+.selected-secondary {
+  color: var(--charcoal);
+  text-decoration: none;
+  display: block;
+}
+
+.selected-secondary a{
+  color: white;
+  background-color: var(--charcoal);
+  text-decoration: none;
+  display: block;
+} */
+
+/* Styling for the site-map page */
+.map h2 {
+  color: var(--teal);
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+}
+
+.map a {
+  color: var(--teal);
+}
+/* Definition list used in Words and Phrases page */
+.definitions dd{
+  margin-bottom: 1.8em;
+}
+
+.words-phrases {
+  outline-style: dotted;
+  outline-color: var(--teal);
+}
+
+/* Footer style */
+.footer {
+  background-color: var(--charcoal);
+  color: white;
+}
+
+.footer a{
+  color: white;
+}
+
+.footer a:focus {
+  outline-color: white;
+}
+
+/* Sitemap Style */
+
+
+/*----------playing with grid----------*/
+.header {
+  grid-area: header;
+}
+.secondary {
+  grid-area: secondary;
+}
+
+.main {
+  grid-area: main;
+}
+
+.footer {
+  grid-area: footer;
+}
+
+.full {
+  display:grid;
+  grid-gap: 20px;
+  grid-template-areas:
+    "header"
+    "secondary"
+    "main"
+    "footer";
+}
+
+@media (min-width: 900px) {
+  .full {
+    grid-template-columns: 1fr 3fr;
+    grid-template-areas:
+      "header     header  header"
+      "secondary  main    main"
+      "footer     footer  footer";
+    }
+    nav ul {
+      display: flex;
+      flex-direction: column;
+    }
+}
