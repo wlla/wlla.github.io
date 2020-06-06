@@ -1,0 +1,8 @@
+<nav aria-label="Secondary" class="secondary">
+  <ul>
+      {% for item in site.data.map %}{% if item.parent == page.category %}
+        <li><a href="https://wlla.github.io/{{ page.category }}/{{ item.id }}">{{ item.name }}</a></li>
+      {% endif %}
+      {% endfor %}
+  </ul>
+</nav>

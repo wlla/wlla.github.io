@@ -249,16 +249,7 @@ tr:nth-child(odd) td {
   display: block;
 } */
 
-/* Styling for the site-map page */
-.map h2 {
-  color: var(--teal);
-  margin-top: 3rem;
-  margin-bottom: 1rem;
-}
 
-.map a {
-  color: var(--teal);
-}
 /* Definition list used in Words and Phrases page */
 .definitions dd{
   margin-bottom: 1.8em;

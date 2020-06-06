@@ -1,39 +1,11 @@
-<!DOCTYPE html>
-<html lang="en"><head>
-  <meta charset="utf-8">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>Reading Order</title>
-  <meta name="description" content="Accessibility testing">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-<!--  <link rel="stylesheet" href="style.css">-->
-  <link rel="icon" type="image/png" sizes="96x96" href="https://wlla.github.io/assets/favicon.png">
-  <link rel="stylesheet" type="text/css" href="https://wlla.github.io/style.css">
-</head>
-<body class="full">
-  <header class="header">
-    <ul class="nav-list">
-      <li><a href="https://wlla.github.io/index.html">Home</a></li>
-      <li><a href="https://wlla.github.io/resources.html">Resources</a></li>
-      <li><a href="https://wlla.github.io/media.html">Media</a></li>
-      <li><a href="https://wlla.github.io/documents.html">Documents</a></li>
-      <li><a class="active" href="https://wlla.github.io/structure.html">Structure</a></li>
-      <li><a href="https://wlla.github.io/components.html">UI Components</a></li>
-      <li><a href="https://wlla.github.io/text.html">Text</a></li>
-    </ul>
-  </header>
-  <nav aria-label="Secondary" class="secondary">
-    <ul>
-      <li><a href="https://wlla.github.io/structure/regions.html">Regions</a></li>
-      <li><a href="https://wlla.github.io/structure/headings.html">Headings</a></li>
-      <li><a href="https://wlla.github.io/structure/lists-tables.html">Lists & Tables</a></li>
-      <li><a href="https://wlla.github.io/structure/navigation.html">Navigation</a></li>
-      <li><a href="https://wlla.github.io/structure/focus.html">Focus</a></li>
-      <li><a href="https://wlla.github.io/structure/reading-order.html">Reading Order</a></li>
-      <li><a href="https://wlla.github.io/structure/titles-language.html">Titles & Language</a></li>
-    </ul>
-  </nav>
-  <main class="main">
-    <h1>Reading Order</h1>
+---
+layout: primary-page
+id: reading-order
+title: Reading order
+meta: Accessibility, WCAG, Components, Keyboard Accessibility
+category: structure
+status: draft
+---
       <p>Reading order is the order of things on a page. Note: in digital technologies, this can be different from the order things are visually presented on a page. This is because styling can be applied to manipulate visual placement. (Often this styling is applied with CSS and Javascript.)</p>
       <p>We need to make sure that the visual and progrrammatic styling are synchronized. For instance, if I published an English language newsletter that has two columns, I want a screenreader to know it should read the heading first, then the left hand column, then the right hand column.</p>
       <p>In something like Word, this is usually taken care of for you. In something like PowerPoint, you might need to set the reading order by organizing a list of the grouped items on the page.</p>
@@ -54,5 +26,3 @@
         <li>Check with assistive technology by reading with a screenreader; you can check the tab order by tabbing through the page, but this won't give you the full reading order of all the elements on the page.</li>
         <li>WAVE will let you check the reading order by skimming the unstyled page. You can also do this by turning off the stylesheet.</li>
       </ul>
-  </main>
-</body>

@@ -1,0 +1,9 @@
+{% include start-doc.html %}
+{% include secondary_nav.html  %}
+
+  <main class="main">
+    <h1>{{ page.title }}{% if page.status == "draft" %} - DRAFT{% endif %}</h1>
+    {{ content }}
+  </main>
+
+{% include end-doc.html %}

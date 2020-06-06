@@ -1,0 +1,190 @@
+# root
+- parent: "root"
+  id: "index"
+  name: "Home"
+  level: first
+
+- parent: "root"
+  id: "resources"
+  name: "Resources"
+  level: first
+
+- parent: "root"
+  id: "media"
+  name: "Media"
+  level: first
+
+- parent: "root"
+  id: "documents"
+  name: "Documents"
+  level: first
+
+- parent: "root"
+  id: "structure"
+  name: "Structure"
+  level: first
+
+- parent: "root"
+  id: "components"
+  name: "UI Components"
+  level: first
+
+- parent: "root"
+  id: "text"
+  name: "Text"
+  level: first
+
+- parent: "index"
+  id: "site-map"
+  name: "Site Map"
+  level: root
+
+- parent: "root"
+  id: "404"
+  name: "404 Error"
+  level: root
+
+# resources
+- parent: "resources"
+  id: "assistive-technology"
+  name: "Assistive Technology"
+  level: second
+
+- parent: "resources"
+  id: "tools"
+  name: "Tools"
+  level: second
+
+- parent: "resources"
+  id: "words-phrases"
+  name: "Words and Phrases"
+  level: second
+
+- parent: "resources"
+  id: "standards"
+  name: "Standards"
+  level: second
+
+# media
+- parent: "media"
+  id: "images"
+  name: "Images"
+  level: second
+
+- parent: "media"
+  id: "audio"
+  name: "Audio"
+  level: second
+
+- parent: "media"
+  id: "video"
+  name: "Video"
+  level: second
+
+- parent: "media"
+  id: "media-players"
+  name: "Media Players"
+  level: second
+
+# documents
+- parent: "documents"
+  id: "word-documents"
+  name: "Word Documents"
+  level: second
+
+- parent: "documents"
+  id: "pdfs"
+  name: "PDFs"
+  level: second
+
+- parent: "documents"
+  id: "social-media"
+  name: "Social Media"
+  level: second
+
+- parent: "documents"
+  id: "presentations"
+  name: "Presentations"
+  level: second
+# structure
+- parent: "structure"
+  id: "regions"
+  name: "Regions"
+  level: second
+
+- parent: "structure"
+  id: "headings"
+  name: "Headings"
+  level: second
+
+- parent: "structure"
+  id: "lists-tables"
+  name: "Lists & Tables"
+  level: second
+
+- parent: "structure"
+  id: "navigation"
+  name: "Navigation"
+  level: second
+
+- parent: "structure"
+  id: "focus"
+  name: "Focus"
+  level: second
+
+- parent: "structure"
+  id: "reading-order"
+  name: "Reading Order"
+  level: second
+
+- parent: "structure"
+  id: "titles-languages"
+  name: "Titles & Languages"
+  level: second
+
+# components
+- parent: "components"
+  id: "labels-instructions"
+  name: "Labels & Instructions"
+  level: second
+
+- parent: "components"
+  id: "links-buttons"
+  name: "Links & Buttons"
+  level: second
+
+- parent: "components"
+  id: "forms"
+  name: "Forms"
+  level: second
+
+- parent: "components"
+  id: "search"
+  name: "Search"
+  level: second
+
+- parent: "components"
+  id: "modals"
+  name: "Modals"
+  level: second
+
+# text
+- parent: "text"
+  id: "plain-language"
+  name: "Plain Language"
+  level: second
+
+- parent: "text"
+  id: "reading-level"
+  name: "Reading Level"
+  level: second
+
+- parent: "text"
+  id: "language"
+  name: "Language"
+  level: second
+
+- parent: "text"
+  id: "vocabulary"
+  name: "Abbreviations, Pronunciation, Unusual Words"
+  level: second

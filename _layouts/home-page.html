@@ -1,0 +1,15 @@
+{% include start-doc.html %}
+
+  <article class="secondary">
+    <figure>
+      <img src="https://wlla.github.io/assets/small.png" alt="Author's profile against a screen displaying a digital test image with vertical bands of white, yellow, green, pink, and red.">
+      <figcaption>Photographer: Mauricio Giraldo Arteaga</figcaption>
+    </figure>
+  </article>
+
+  <main class="main">
+    <h1>{{ page.title }}{% if page.status == "draft" %} - DRAFT{% endif %}</h1>
+    {{ content }}
+  </main>
+
+{% include end-doc.html %}

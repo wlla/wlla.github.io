@@ -1,0 +1,28 @@
+---
+layout: primary-page
+id: structure
+title: Structure
+meta: Accessibility, WCAG, Components, Keyboard Accessibility
+category: structure
+status: draft
+---
+<p>Sturcture! What a marvel. Structure is great. In this context, I'm using it to describe the fundamental organization, hierarchy, and semantics of digital materials. How is a page organized.</p>
+<p>Structure is vital because it feeds into clear communication and content. It's important that it is programmatically available. Being programmatically available means that computers and other software can recognize the structure. A list is a sort of structure, we could create a list using purely visual means. (On the web, this would be CSS, in a Word document this might be something like clip art.) If we did this, someone using thier own stylesheet wouldn't know a group of items was a list.</p>
+<h2>Long Winded Cookbook Analogy</h2>
+<p>When thinking about structure, I like to think about cookbooks.</p>
+<p>I've just pulled three cookbooks from my shelf. They are: <i>The Fannie Merritt Farmer Boston Cooking School Cookbook</i>, <i>The Taste of Country Cooking</i> by Edna Lewis, and <i>Bernard Clayton's New Complete Book of Breads: Revised and Expanded</i> by Bernard Clayton.</p>
+<p>I have these in print in my library; they are hardback and some have dust jackets. Inside, each of these cookbooks have the same basic format:
+  <ol>
+    <li>Front matter</li>
+    <li>Title page</li>
+    <li>Table of contents</li>
+    <li>Sections with recipes</li>
+    <li>Index</li>
+  </ol></p>
+  <p>These high level chunks of the book are like landmark regions. Each serve a different purpupose, but they follow expected conventions and typically follow the same order. I expect the Front matter to be in the beginning and I know what information will be stored in the Index.</p>
+  <p>At a minimum, the Table of Contents cover the different sections. Some go further and include brief descriptions and list out the actual recipes. Examples of the sections from Fannie Farmer are "Soups and Chowders", "Stuffings", "Garnishes and Relishes." In the bread cookbook its "Buckwheat breads", "Festive breads", "Salt-Rising Breads".</p>
+  <p>The indices list out ingredients ("cornmeal"), techniques ("Vacuum-sealing, about"), and recipes ("Red Flannel Hash").</p>
+  <p>Writing indices is an art. In print, you want to be comprehensive, you have to think of the different terms someone might use (pancakes versus flapjacks), sometimes you need to make it nested (ex cakes) but you have to make it short enough that it is useful to scan.</p>
+  <p>For instance "Cake" is broken into categories like "Cake, coffee", "Cakes, Loaf and Layer," "Cakes, (<i>see also</i> Patties)", "Cakes, Small (<i>see also</i> Bars; Cakes, Coffee, Cakes, Loaf and Layer, Cookies)". These are further subdivided, for instance "Fruit" has "Birthday, Dark, Layer for Bride's, Light, and Wedding"</p>
+  <p>I know what to expect from most cook books; I can expect a Table of Contents, recipes (often organized by sections), and an index. I know where to scan for what I'm looking for. Then the recipies are all generally composed in the same way for each book. Either narratively or more organized.</p>
+<!-- <p>Imagine a cookbook about baking bread. There's a section of frontmatter with introductory pages, including things like the title and the author name. Then a table of contents. Then there are sections for different kinds of bread: yeasted, quick, sweet, holiday. Within each section are sets of recipes. Inside each recipe, thery maybe little callouts that relate to the recipe but offer more information, like "did you know yeast can be stored in the freezer." At the end of the book is an index listing many ingredients and techniques that a user can use to reference different sections.</p> -->

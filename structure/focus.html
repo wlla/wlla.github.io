@@ -1,39 +1,11 @@
-<!DOCTYPE html>
-<html lang="en"><head>
-  <meta charset="utf-8">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>Visible Focus</title>
-  <meta name="description" content="Accessibility testing">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-<!--  <link rel="stylesheet" href="style.css">-->
-  <link rel="icon" type="image/png" sizes="96x96" href="https://wlla.github.io/assets/favicon.png">
-  <link rel="stylesheet" type="text/css" href="https://wlla.github.io/style.css">
-</head>
-<body class="full">
-  <header class="header">
-    <ul class="nav-list">
-      <li><a href="https://wlla.github.io/index.html">Home</a></li>
-      <li><a href="https://wlla.github.io/resources.html">Resources</a></li>
-      <li><a href="https://wlla.github.io/media.html">Media</a></li>
-      <li><a href="https://wlla.github.io/documents.html">Documents</a></li>
-      <li><a class="active" href="https://wlla.github.io/structure.html">Structure</a></li>
-      <li><a href="https://wlla.github.io/components.html">UI Components</a></li>
-      <li><a href="https://wlla.github.io/text.html">Text</a></li>
-    </ul>
-  </header>
-  <nav aria-label="Secondary" class="secondary">
-    <ul>
-      <li><a href="https://wlla.github.io/structure/regions.html">Regions</a></li>
-      <li><a href="https://wlla.github.io/structure/headings.html">Headings</a></li>
-      <li><a href="https://wlla.github.io/structure/lists-tables.html">Lists & Tables</a></li>
-      <li><a href="https://wlla.github.io/structure/navigation.html">Navigation</a></li>
-      <li><a href="https://wlla.github.io/structure/focus.html">Focus</a></li>
-      <li><a href="https://wlla.github.io/structure/reading-order.html">Reading Order</a></li>
-      <li><a href="https://wlla.github.io/structure/titles-language.html">Titles & Language</a></li>
-    </ul>
-  </nav>
-  <main class="main">
-    <h1>Focus</h1>
+---
+layout: primary-page
+id: focus
+title: Focus
+meta: Accessibility, WCAG, Components, Keyboard Accessibility
+category: structure
+status: draft
+---
     <p>Focus is the focus of your computer or software's attention. When something is in focus, it can be controlled or used. On the web, when a link is in focus, hitting enter will open the linked page.</p>
     <h2>Managing Focus</h2>
     <p>Things that can receive focus are part of the tab order of the page. In HTML, the tab order is built from the order of elements in the HTML source document. (These create the document object model and then the accessibility tree.) The <code>tabindex</code> attribute can add to or manipulate the tab order. Never use a <code>tabindex</code> of greater than 0. It will create all sorts of unexpected behavior. If you think you need a positive tabindes, what you actually need is to rewrite your HTML.</p>
@@ -51,5 +23,3 @@
     <h3>Checking Visible Focus</h3>
     <p>With visible focus, it is easiest to have developers and designers programmatically check that the styling of visible focus follows these requirements. Visual checks for visible focus won't be as thorough. The aXe tools will tell you if the <code>`outline:none`</code> styling is present.</p>
     <p>Remember to check the visible focus contrast colors during QA.</p>
-  </main>
-</body>

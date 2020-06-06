@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>{{ page.title }} | Willabrarian</title>
+  <meta name="description" content={{ page.meta }}>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" sizes="96x96" href="https://wlla.github.io/assets/favicon.png">
+  <!--  <link rel="stylesheet" href="style.css">-->
+  <link rel="stylesheet" type="text/css" href="https://wlla.github.io/style.css">
+</head>
+<body class="full">
+<header class="header">
+  <ul class="nav-list">
+    {% for item in site.data.map %}{% if item.level == "first" %}
+      <li><a href="https://wlla.github.io/{{ item.id }}">{{ item.name }}</a></li>{% endif %}{% endfor %}
+  </ul>
+</header>

@@ -1,39 +1,11 @@
-<!DOCTYPE html>
-<html lang="en"><head>
-  <meta charset="utf-8">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>Navigation</title>
-  <meta name="description" content="Accessibility testing">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-<!--  <link rel="stylesheet" href="style.css">-->
-  <link rel="icon" type="image/png" sizes="96x96" href="https://wlla.github.io/assets/favicon.png">
-  <link rel="stylesheet" type="text/css" href="https://wlla.github.io/style.css">
-</head>
-<body class="full">
-  <header class="header">
-    <ul class="nav-list">
-      <li><a href="https://wlla.github.io/index.html">Home</a></li>
-      <li><a href="https://wlla.github.io/resources.html">Resources</a></li>
-      <li><a href="https://wlla.github.io/media.html">Media</a></li>
-      <li><a href="https://wlla.github.io/documents.html">Documents</a></li>
-      <li><a class="active" href="https://wlla.github.io/structure.html">Structure</a></li>
-      <li><a href="https://wlla.github.io/components.html">UI Components</a></li>
-      <li><a href="https://wlla.github.io/text.html">Text</a></li>
-    </ul>
-  </header>
-  <nav aria-label="Secondary" class="secondary">
-    <ul>
-      <li><a href="https://wlla.github.io/structure/regions.html">Regions</a></li>
-      <li><a href="https://wlla.github.io/structure/headings.html">Headings</a></li>
-      <li><a href="https://wlla.github.io/structure/lists-tables.html">Lists & Tables</a></li>
-      <li><a href="https://wlla.github.io/structure/navigation.html">Navigation</a></li>
-      <li><a href="https://wlla.github.io/structure/focus.html">Focus</a></li>
-      <li><a href="https://wlla.github.io/structure/reading-order.html">Reading Order</a></li>
-      <li><a href="https://wlla.github.io/structure/titles-language.html">Titles & Language</a></li>
-    </ul>
-  </nav>
-  <main class="main">
-    <h1>Navigation</h1>
+---
+layout: primary-page
+id: navigation
+title: Navigation
+meta: Accessibility, WCAG, Components, Keyboard Accessibility
+category: structure
+status: draft
+---
     <h2>Elements and Regions</h2>
     <p>On the web, the HTML element `nav` should be used for navigation. Using this element will create a navigation region. If you have multiple navigation regions on a page, give each one a unique name with the `aria-label` attribute. Remember that the type of region will be announced by the screenreader so there's no need to include the words "navigation" or "region" in the label. The <a href="region.html">Region page</a> has more details on all these points.</p>
     <h2>Sitemap</h2>
@@ -54,5 +26,3 @@
     <p>If your new page content is created with JS, as with a single page application, build it so everyone is notified when the new content loads; make that information available to screenreaders.</p>
     <p>My personal preference is also to always have your URL constructed in a way so that people can update the URL to navigate to a desired page.</p>
     <p>Getting rid of pagination is a bad idea. This happens with the infinite scroll pattern or adding a "see more" button to dynamically load in more content. Using these patterns can cause navigation issues.</p>
-  </main>
-</body>
