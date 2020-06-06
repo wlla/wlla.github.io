@@ -260,6 +260,17 @@ tr:nth-child(odd) td {
   outline-color: var(--teal);
 }
 
+/* Site Map style */
+.site-map h2{
+  color: var(--teal);
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+}
+
+.site-map a{
+  color: var(--teal);
+}
+
 /* Footer style */
 .footer {
   background-color: var(--charcoal);

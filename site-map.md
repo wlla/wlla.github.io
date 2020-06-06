@@ -10,10 +10,10 @@ status: draft
 ---
 
 {% for cat in site.data.map %}{% if cat.level == "first" %}
-  <h2><a href="https://willaarmstrong.com/{{ cat.id }}">{{ cat.name }}</a></h2>
+  <h2 class="site-map"><a href="https://willaarmstrong.com/{{ cat.id }}">{{ cat.name }}</a></h2>
   <ul>
   {% for item in site.data.map %}{% if item.parent == cat.id %}
-    <li><a href="https://willaarmstrong.com/{{ item.parent }}/{{ item.id }}">{{ item.name }}</a></li>
+    <li><a class="site-map" href="https://willaarmstrong.com/{{ item.parent }}/{{ item.id }}">{{ item.name }}</a></li>
   {% endif %}
   {% endfor %}
   </ul>
